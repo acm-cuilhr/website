@@ -1,20 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<script src="https://cdn.tailwindcss.com"></script>
 
-		<title>ACM</title>
-	</head>
-	<body class="bg-black text-white">
-		<nav>Navigation</nav>
-		<section>Landing Section (Hasnat Khalid)</section>
-		<section>Slider Section (Shan-e-Shafiq)</section>
-		<section>Stats + why join acm section (Shan-e-Shafiq)</section>
-		<section>Testimonials Section (Ali Hamza)</section>
-		<section>Gallery Section (Shan-e-Shafiq)</section>
-		<section>Contact Form Section (Arooj Fatima)</section>
-		<footer>Footer (Arooj Fatima)</footer>
-	</body>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<script src="https://cdn.tailwindcss.com"></script>
+	<!-- Swiper JS -->
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+	<script defer src="SliderScript.js"></script>
+	<!-- Tailwind CDN -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+	<title>ACM</title>
+</head>
+
+<body class="bg-black text-white">
+	<nav>Navigation</nav>
+	<section class="w-screen h-screen bg-slate-200">Landing Section (Hasnat Khalid)</section>
+
+
+	<!-- Slider Section (Shan-e-Shafiq) -->
+
+	<section class="lg:h-[414px] w-screen justify-center items-center bg-black">
+		<!-- SLIDER -->
+		<div class="swiper mySwiper h-full w-full lg:w-[1300px]">
+			<div class="swiper-wrapper">
+				<!-- SLIDER ITEMS -->
+				<div class="swiper-slide justify-center items-center flex px-[45px] select-none">
+
+					<div
+						class="bg-[#1B1622] w-full lg:h-[380px] rounded-[16px] p-5 lg:p-[40px] flex flex-col lg:flex-row justify-between">
+
+						<!-- SLIDER IMAGE CONTAINER -->
+
+						<div class="w-full lg:w-[40%] lg:h-full overflow-hidden rounded-[5px]">
+							<img class="h-full w-full object-cover"
+								src="https://media.istockphoto.com/id/1759436430/photo/back-view-of-a-female-speaker-giving-a-speech-in-front-of-people-at-convention-center.webp?b=1&s=170667a&w=0&k=20&c=nSIt4KkxKZcBvA7Ax3_4gKsbg0M6tqgaPY9Drrgj0bY="
+								alt="Image">
+						</div>
+
+						<!-- SLIDER TEXT CONTAINER -->
+
+						<div
+							class=" h-[50%] lg:h-full w-full lg:w-[60%] flex items-center justify-between px-0 lg:px-10 flex-col mt-10 lg:mt-0">
+
+							<!-- EVENTS & SEMINARS -->
+							<div
+								class="bg-gradient-to-r from-[#14F195] via-[#80ECFF] via-[#64A8F2] to-[#64A8F2] font-poppins font-bold text-black flex justify-center items-center py-2 px-3 rounded-full text-[16px] text-center">
+								OUR EVENTS & SEMINARS</div>
+
+							<!-- STUDENTS WEEK -->
+							<div>
+								<h1 class="font-poppins text-[46px] font-bold text-[#CCCCCC] text-center mt-5 lg:mt-0">
+									Students Week
+								</h1>
+								<p class="text-center text-[#C6C6C6]">Lorem ipsum dolor, sit amet consectetur
+									adipisicing elit.
+									Consequuntur animi doloribus facilis onsequuntur animi doloribus facilis.</p>
+							</div>
+
+							<!-- EXPLORE MORE BUTTON -->
+							<button class="border border-white p-2 rounded-full mt-5 lg:mt-0">EXPLORE MORE</button>
+
+						</div>
+					</div>
+				</div>
+				<div class="swiper-slide justify-center items-center flex px-[45px] select-none">
+
+					<div
+						class="bg-[#1B1622] w-full lg:h-[380px] rounded-[16px] p-5 lg:p-[40px] flex flex-col lg:flex-row justify-between">
+
+						<!-- SLIDER IMAGE CONTAINER -->
+
+						<div class="w-full lg:w-[40%] lg:h-full overflow-hidden rounded-[5px]">
+							<img class="h-full w-full object-cover"
+								src="https://media.istockphoto.com/id/1759436430/photo/back-view-of-a-female-speaker-giving-a-speech-in-front-of-people-at-convention-center.webp?b=1&s=170667a&w=0&k=20&c=nSIt4KkxKZcBvA7Ax3_4gKsbg0M6tqgaPY9Drrgj0bY="
+								alt="Image">
+						</div>
+
+						<!-- SLIDER TEXT CONTAINER -->
+
+						<div
+							class=" h-[50%] lg:h-full w-full lg:w-[60%] flex items-center justify-between px-0 lg:px-10 flex-col mt-10 lg:mt-0">
+
+							<!-- EVENTS & SEMINARS -->
+							<div
+								class="bg-gradient-to-r from-[#14F195] via-[#80ECFF] via-[#64A8F2] to-[#64A8F2] font-poppins font-bold text-black flex justify-center items-center py-2 px-3 rounded-full text-[16px] text-center">
+								OUR EVENTS & SEMINARS</div>
+
+							<!-- STUDENTS WEEK -->
+							<div>
+								<h1 class="font-poppins text-[46px] font-bold text-[#CCCCCC] text-center mt-5 lg:mt-0">
+									Students Week
+								</h1>
+								<p class="text-center text-[#C6C6C6]">Lorem ipsum dolor, sit amet consectetur
+									adipisicing elit.
+									Consequuntur animi doloribus facilis onsequuntur animi doloribus facilis.</p>
+							</div>
+
+							<!-- EXPLORE MORE BUTTON -->
+							<button class="border border-white p-2 rounded-full mt-5 lg:mt-0">EXPLORE MORE</button>
+
+						</div>
+					</div>
+				</div>
+				<div class="swiper-slide justify-center items-center flex px-[45px] select-none">
+
+					<div
+						class="bg-[#1B1622] w-full lg:h-[380px] rounded-[16px] p-5 lg:p-[40px] flex flex-col lg:flex-row justify-between">
+
+						<!-- SLIDER IMAGE CONTAINER -->
+
+						<div class="w-full lg:w-[40%] lg:h-full overflow-hidden rounded-[5px]">
+							<img class="h-full w-full object-cover"
+								src="https://media.istockphoto.com/id/1759436430/photo/back-view-of-a-female-speaker-giving-a-speech-in-front-of-people-at-convention-center.webp?b=1&s=170667a&w=0&k=20&c=nSIt4KkxKZcBvA7Ax3_4gKsbg0M6tqgaPY9Drrgj0bY="
+								alt="Image">
+						</div>
+
+						<!-- SLIDER TEXT CONTAINER -->
+
+						<div
+							class=" h-[50%] lg:h-full w-full lg:w-[60%] flex items-center justify-between px-0 lg:px-10 flex-col mt-10 lg:mt-0">
+
+							<!-- EVENTS & SEMINARS -->
+							<div
+								class="bg-gradient-to-r from-[#14F195] via-[#80ECFF] via-[#64A8F2] to-[#64A8F2] font-poppins font-bold text-black flex justify-center items-center py-2 px-3 rounded-full text-[16px] text-center">
+								OUR EVENTS & SEMINARS</div>
+
+							<!-- STUDENTS WEEK -->
+							<div>
+								<h1 class="font-poppins text-[46px] font-bold text-[#CCCCCC] text-center mt-5 lg:mt-0">
+									Students Week
+								</h1>
+								<p class="text-center text-[#C6C6C6]">Lorem ipsum dolor, sit amet consectetur
+									adipisicing elit.
+									Consequuntur animi doloribus facilis onsequuntur animi doloribus facilis.</p>
+							</div>
+
+							<!-- EXPLORE MORE BUTTON -->
+							<button class="border border-white p-2 rounded-full mt-5 lg:mt-0">EXPLORE MORE</button>
+
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<!-- SLIDER BUTTONS -->
+			<div class="swiper-button-next"></div>
+			<div class="swiper-button-prev"></div>
+		</div>
+	</section>
+
+
+
+	<section>Stats + why join acm section (Shan-e-Shafiq)</section>
+	<section>Testimonials Section (Ali Hamza)</section>
+	<section>Gallery Section (Shan-e-Shafiq)</section>
+	<section>Contact Form Section (Arooj Fatima)</section>
+	<footer>Footer (Arooj Fatima)</footer>
+</body>
+
 </html>
