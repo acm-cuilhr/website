@@ -10,6 +10,48 @@
 	<script defer src="SliderScript.js"></script>
 	<!-- Tailwind CDN -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+	<!-- Tailwind config -->
+	<script>
+		tailwind.config = {
+			theme: {
+				fontFamily: {
+					'poppins': ["Poppins", "sans-serif"]
+				},
+				extend: {
+					keyframes: {
+						slide: {
+							'0%': { transform: "translateX(0)" },
+							'100%': { transform: "translateX(-100%)" },
+						}
+					},
+					animation: {
+						slide: 'slide 10s linear infinite',
+					}
+				}
+			},
+			variants: {
+				animation: ['responsive', 'hover', 'focus'],
+			},
+			plugins: [
+				function ({ addUtilities }) {
+					addUtilities({
+						'.animation-paused': {
+							'animation-play-state': 'paused',
+						},
+						'.animation-running': {
+							'animation-play-state': 'running',
+						},
+					}, ['responsive', 'hover']);
+				},
+			],
+		}
+	</script>
+	<!-- Google fonts Poppins -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+		rel="stylesheet">
 	<title>ACM</title>
 </head>
 
@@ -253,7 +295,180 @@
 
 	<!-- Gallery Section (Shan-e-Shafiq) -->
 
-	<section>
+	<section class=" w-screen bg-[url('./assets/GallerybgImg.png')] bg-cover bg-center pb-[120px]">
+
+		<!-- MAIN HEADING -->
+		<div class="p-10 lg:px-[120px]">
+			<h1 class="font-poppins text-5xl font-bold text-center lg:text-start">Past Events Gallery</h1>
+		</div>
+
+		<!-- SLIDER -->
+		<div class="overflow-hidden py-[40px] w-full flex justify-center group">
+
+			<!-- SLIDER CARDS CONTAINER -->
+			<div class="flex animate-slide group-hover:animation-paused animation-running">
+
+				<!-- SLIDER CARDS -->
+				<div class="mx-3 h-[420px] rounded-xl flex flex-col justify-between items-center transition-all">
+					<div
+						class="w-[300px] h-[200px] rounded-[8px] bg-[#19161C] flex flex-col justify-center items-center hover:shadow-[0_0_25px_2px_#F087FF]">
+						<h1 class="text-[40px] text-[#F087FF] font-poppins">1000's</h1>
+						<p class="font-bold text-sm text-[#BABABA] font-poppins text-center">HOUSE PARTICIPANTS</p>
+					</div>
+					<div
+						class="w-[300px] h-[200px] rounded-[8px] bg-[#19161C] flex justify-center items-center overflow-hidden hover:shadow-[0_0_25px_2px_#F087FF]">
+						<img class="w-full h-full object-cover" src="./assets/GalleryImg1.png" alt="image">
+					</div>
+				</div>
+				<div
+					class="mx-3 w-[600px] h-[420px] rounded-xl transition-all overflow-hidden hover:shadow-[0_0_25px_2px_#F087FF]">
+					<img class="w-full h-full object-cover" src="./assets/GalleryImg2.png" alt="image">
+				</div>
+				<div class="mx-3 h-[420px] rounded-xl flex flex-col justify-between items-center transition-all">
+					<div
+						class="w-[300px] h-[200px] rounded-[8px] bg-[#19161C] flex justify-center items-center overflow-hidden hover:shadow-[0_0_25px_2px_#F087FF]">
+						<img class="w-full h-full object-cover" src="./assets/GalleryImg3.png" alt="image">
+					</div>
+					<div
+						class="w-[300px] h-[200px] rounded-[8px] bg-[#19161C] flex flex-col justify-center items-center hover:shadow-[0_0_25px_2px_#F087FF]">
+						<h1 class="text-[40px] text-[#19FB9B] font-poppins">100's</h1>
+						<p class="font-bold text-sm text-[#BABABA] font-poppins text-center">DEVELOPERS BUILDING
+							DURING
+							HACKTOHONS</p>
+					</div>
+				</div>
+				<div
+					class="mx-3 w-[300px] h-[420px] rounded-xl transition-all overflow-hidden hover:shadow-[0_0_25px_2px_#F087FF]">
+					<img class="w-full h-full object-cover" src="./assets/GalleryImg4.png" alt="image">
+				</div>
+			</div>
+			<!-- SLIDER CARDS CONTAINER -->
+			<div class="flex animate-slide group-hover:animation-paused animation-running">
+
+				<!-- SLIDER CARDS -->
+				<div class="mx-3 h-[420px] rounded-xl flex flex-col justify-between items-center transition-all">
+					<div
+						class="w-[300px] h-[200px] rounded-[8px] bg-[#19161C] flex flex-col justify-center items-center hover:shadow-[0_0_25px_2px_#F087FF]">
+						<h1 class="text-[40px] text-[#F087FF] font-poppins">1000's</h1>
+						<p class="font-bold text-sm text-[#BABABA] font-poppins text-center">HOUSE PARTICIPANTS</p>
+					</div>
+					<div
+						class="w-[300px] h-[200px] rounded-[8px] bg-[#19161C] flex justify-center items-center overflow-hidden hover:shadow-[0_0_25px_2px_#F087FF]">
+						<img class="w-full h-full object-cover" src="./assets/GalleryImg1.png" alt="image">
+					</div>
+				</div>
+				<div
+					class="mx-3 w-[600px] h-[420px] rounded-xl transition-all overflow-hidden hover:shadow-[0_0_25px_2px_#F087FF]">
+					<img class="w-full h-full object-cover" src="./assets/GalleryImg2.png" alt="image">
+				</div>
+				<div class="mx-3 h-[420px] rounded-xl flex flex-col justify-between items-center transition-all">
+					<div
+						class="w-[300px] h-[200px] rounded-[8px] bg-[#19161C] flex justify-center items-center overflow-hidden hover:shadow-[0_0_25px_2px_#F087FF]">
+						<img class="w-full h-full object-cover" src="./assets/GalleryImg3.png" alt="image">
+					</div>
+					<div
+						class="w-[300px] h-[200px] rounded-[8px] bg-[#19161C] flex flex-col justify-center items-center hover:shadow-[0_0_25px_2px_#F087FF]">
+						<h1 class="text-[40px] text-[#19FB9B] font-poppins">100's</h1>
+						<p class="font-bold text-sm text-[#BABABA] font-poppins text-center">DEVELOPERS BUILDING
+							DURING
+							HACKTOHONS</p>
+					</div>
+				</div>
+				<div
+					class="mx-3 w-[300px] h-[420px] rounded-xl transition-all overflow-hidden hover:shadow-[0_0_25px_2px_#F087FF]">
+					<img class="w-full h-full object-cover" src="./assets/GalleryImg4.png" alt="image">
+				</div>
+			</div>
+			<!-- SLIDER CARDS CONTAINER -->
+			<div class="flex animate-slide group-hover:animation-paused animation-running">
+
+				<!-- SLIDER CARDS -->
+				<div class="mx-3 h-[420px] rounded-xl flex flex-col justify-between items-center transition-all">
+					<div
+						class="w-[300px] h-[200px] rounded-[8px] bg-[#19161C] flex flex-col justify-center items-center hover:shadow-[0_0_25px_2px_#F087FF]">
+						<h1 class="text-[40px] text-[#F087FF] font-poppins">1000's</h1>
+						<p class="font-bold text-sm text-[#BABABA] font-poppins text-center">HOUSE PARTICIPANTS</p>
+					</div>
+					<div
+						class="w-[300px] h-[200px] rounded-[8px] bg-[#19161C] flex justify-center items-center overflow-hidden hover:shadow-[0_0_25px_2px_#F087FF]">
+						<img class="w-full h-full object-cover" src="./assets/GalleryImg1.png" alt="image">
+					</div>
+				</div>
+				<div
+					class="mx-3 w-[600px] h-[420px] rounded-xl transition-all overflow-hidden hover:shadow-[0_0_25px_2px_#F087FF]">
+					<img class="w-full h-full object-cover" src="./assets/GalleryImg2.png" alt="image">
+				</div>
+				<div class="mx-3 h-[420px] rounded-xl flex flex-col justify-between items-center transition-all">
+					<div
+						class="w-[300px] h-[200px] rounded-[8px] bg-[#19161C] flex justify-center items-center overflow-hidden hover:shadow-[0_0_25px_2px_#F087FF]">
+						<img class="w-full h-full object-cover" src="./assets/GalleryImg3.png" alt="image">
+					</div>
+					<div
+						class="w-[300px] h-[200px] rounded-[8px] bg-[#19161C] flex flex-col justify-center items-center hover:shadow-[0_0_25px_2px_#F087FF]">
+						<h1 class="text-[40px] text-[#19FB9B] font-poppins">100's</h1>
+						<p class="font-bold text-sm text-[#BABABA] font-poppins text-center">DEVELOPERS BUILDING
+							DURING
+							HACKTOHONS</p>
+					</div>
+				</div>
+				<div
+					class="mx-3 w-[300px] h-[420px] rounded-xl transition-all overflow-hidden hover:shadow-[0_0_25px_2px_#F087FF]">
+					<img class="w-full h-full object-cover" src="./assets/GalleryImg4.png" alt="image">
+				</div>
+			</div>
+			<!-- SLIDER CARDS CONTAINER -->
+			<div class="flex animate-slide group-hover:animation-paused animation-running">
+
+				<!-- SLIDER CARDS -->
+				<div class="mx-3 h-[420px] rounded-xl flex flex-col justify-between items-center transition-all">
+					<div
+						class="w-[300px] h-[200px] rounded-[8px] bg-[#19161C] flex flex-col justify-center items-center hover:shadow-[0_0_25px_2px_#F087FF]">
+						<h1 class="text-[40px] text-[#F087FF] font-poppins">1000's</h1>
+						<p class="font-bold text-sm text-[#BABABA] font-poppins text-center">HOUSE PARTICIPANTS</p>
+					</div>
+					<div
+						class="w-[300px] h-[200px] rounded-[8px] bg-[#19161C] flex justify-center items-center overflow-hidden hover:shadow-[0_0_25px_2px_#F087FF]">
+						<img class="w-full h-full object-cover" src="./assets/GalleryImg1.png" alt="image">
+					</div>
+				</div>
+				<div
+					class="mx-3 w-[600px] h-[420px] rounded-xl transition-all overflow-hidden hover:shadow-[0_0_25px_2px_#F087FF]">
+					<img class="w-full h-full object-cover" src="./assets/GalleryImg2.png" alt="image">
+				</div>
+				<div class="mx-3 h-[420px] rounded-xl flex flex-col justify-between items-center transition-all">
+					<div
+						class="w-[300px] h-[200px] rounded-[8px] bg-[#19161C] flex justify-center items-center overflow-hidden hover:shadow-[0_0_25px_2px_#F087FF]">
+						<img class="w-full h-full object-cover" src="./assets/GalleryImg3.png" alt="image">
+					</div>
+					<div
+						class="w-[300px] h-[200px] rounded-[8px] bg-[#19161C] flex flex-col justify-center items-center hover:shadow-[0_0_25px_2px_#F087FF]">
+						<h1 class="text-[40px] text-[#19FB9B] font-poppins">100's</h1>
+						<p class="font-bold text-sm text-[#BABABA] font-poppins text-center">DEVELOPERS BUILDING
+							DURING
+							HACKTOHONS</p>
+					</div>
+				</div>
+				<div
+					class="mx-3 w-[300px] h-[420px] rounded-xl transition-all overflow-hidden hover:shadow-[0_0_25px_2px_#F087FF]">
+					<img class="w-full h-full object-cover" src="./assets/GalleryImg4.png" alt="image">
+				</div>
+			</div>
+		</div>
+
+		<!-- ITS TIME TO JOIN ..... -->
+		<div class="w-full mt-[100px] p-10 lg:px-[300px]">
+			<h1 class="text-center text-[38px] font-poppins font-bold">It's time to join the thousands of creators,
+				artists, and developers</h1>
+		</div>
+
+		<!-- START JOINING BUTTON -->
+
+		<div class="w-full flex justify-center items-center mt-10">
+			<button
+				class="bg-gradient-to-r from-[#F087FF] via-[#6E1FCE] to-[#6E1FCE]/20 rounded-full px-[24px] py-[12px]">
+				START JOINING
+			</button>
+		</div>
 
 	</section>
 
