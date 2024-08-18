@@ -1,20 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<script src="https://cdn.tailwindcss.com"></script>
 
-		<title>ACM</title>
-	</head>
-	<body class="bg-black text-white">
-		<nav>Navigation</nav>
-		<section>Landing Section (Hasnat Khalid)</section>
-		<section>Slider Section (Shan-e-Shafiq)</section>
-		<section>Stats + why join acm section (Shan-e-Shafiq)</section>
-		<section>Testimonials Section (Ali Hamza)</section>
-		<section>Gallery Section (Shan-e-Shafiq)</section>
-		<section>Contact Form Section (Arooj Fatima)</section>
-		<footer>Footer (Arooj Fatima)</footer>
-	</body>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<script src="https://cdn.tailwindcss.com"></script>
+	<title>ACM</title>
+	<link rel="stylesheet" href="index.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+	<section class="section">
+		<h1 class="heading">Get in Touch with our <strong> Team</strong>. </h1>
+		<section class="form">
+			<form id="contactForm">
+
+				<div class="form-group">
+					<input type="text" name="name" id="Name" placeholder="Full Name">
+				</div>
+
+				<div class="form-group">
+					<input type="email" name="email" id="Email" placeholder="Email Address">
+				</div>
+
+				<div class="form-group">
+					<input type="tel" name="number" id="Number" placeholder="Phone Number">
+				</div>
+
+				<div class="form-group">
+					<textarea name="message" id="Message" placeholder="Write Something here..." rows="7"></textarea>
+				</div>
+
+				<button type="submit">SUBMIT NOW</button>
+			</form>
+
+			<div class="image">
+				<img class="img" src="./images/image 48.png" alt="Not Found">
+				<h1 class="img-text">"Transforming the technical into thrilling adventures"</h1>
+			</div>
+
+		</section>
+	</section>
+
+	<footer>
+		<div class="left">
+
+			<h1 class="foot">We would love to hear from you.</h1>
+
+			<div class="text font">Feel free to reach us if you want to collaborate with us, or simply have a chat.
+			</div>
+
+			<button class="button">Get Membership <i class="fa fa-arrow-right"></i> </button>
+
+			<div class="text font">Don't like the forms? Drop us a line via email. </div>
+			<div class="font">info@acm.com</div>
+
+			<div class="copy">
+				<div class="text font">&copy; ACM 2015. All Rights Reserved.</div>
+				<div class="font privacy"> Privacy Policy</div>
+			</div>
+		</div>
+
+		<div class="right">
+			<h2 class="contact">CONTACT US</h2>
+
+			<div class="right-data">
+				<div class="first">
+					<div class="sec">
+						<div class="text font">Our Email</div>
+						<div class="mail">info@acm.com</div>
+					</div>
+
+					<div class="sec">
+						<div class="text font">Our Phone</div>
+						<div class="mail">+971 (17) 101 3457</div>
+					</div>
+				</div>
+
+				<div class="second">
+					<div class="sec">
+						<div class="text font">Villa no. 3 - Street # 17-</div>
+						<div class="text font">Al Bahra 2 - Dubai - United</div>
+						<div class="text font">Arab Emirates</div>
+					</div>
+
+					<div class="sec">
+						<h2 class="follow">FOLLOW US</h2>
+
+						<ul class="icon">
+							<li class="social">
+								<a href="#" class="fa fa-facebook" aria-hidden="true"></a>
+							</li>
+							<li class="social">
+								<a href="#" class="fa fa-twitter" aria-hidden="true"></a>
+							</li>
+							<li class="social">
+								<a href="#" class="fa fa-instagram" aria-hidden="true"></a>
+							</li>
+							<li class="social">
+								<a href="#" class="fa fa-linkedin" aria-hidden="true"></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+	</footer>
+</body>
+<script>
+	document.getElementById('contactForm').addEventListener('submit', function (event) {
+		event.preventDefault(); // Prevent the form from submitting in the traditional way
+
+		const formData = new FormData(this);
+
+		fetch('backend.php', {
+			method: 'POST',
+			body: formData
+		})
+			.then(response => response.text()) // assuming the backend returns a text response
+			.then(data => {
+				alert('Form submitted successfully!');
+				console.log(data);
+				// Optionally reset the form
+				this.reset();
+			})
+			.catch(error => {
+				alert('There was an error submitting the form.');
+				console.error('Error:', error);
+			});
+	});
+</script>
+
 </html>
