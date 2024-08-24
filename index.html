@@ -12,6 +12,29 @@
 			href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 		<!-- Tailwind CDN -->
 		<script src="https://cdn.tailwindcss.com"></script>
+		<!-- Styles by Hamza -->
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
+			@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+	
+			body {
+				font-family: 'Poppins', sans-serif;
+			}
+	
+			.testimonial-card-wrapper {
+				perspective: 1000px; /* Depth of perspective */
+			}
+	
+			.testimonial-card {
+				transition: transform 0.3s ease;
+				transform-style: preserve-3d;
+				will-change: transform;
+			}
+	
+			.testimonial-card-wrapper:hover .testimonial-card {
+				transform: rotateX(var(--tilt-x)) rotateY(var(--tilt-y));
+			}
+		</style>
 		<!-- Tailwind config -->
 		<script>
 			tailwind.config = {
@@ -321,8 +344,82 @@
 				</div>
 			</div>
 		</section>
-
-		<section>Testimonials Section (Ali Hamza)</section>
+		<!-- Testimonials Section (Ali Hamza) -->
+		<section>
+			<div class="w-[1440px] h-[812px] relative p-16">
+				<!-- Title Section -->
+				<div class="absolute top-[73px] left-[160px] w-[650px] h-[108px]">
+					<h1 class="text-[36px] font-bold leading-[54px] text-white">
+						Testimonials. <br><span class="text-[#ae3fbc]">Loved</span>
+						by ex members.
+					</h1>
+				</div>
+		
+				<div class="absolute top-[182px] left-[164px] w-[642px] h-[79px]">
+					<p class="text-[20px] font-normal leading-[30px] text-[#C6C6C6]">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+					</p>
+				</div>
+		
+				<!-- Testimonials Section -->
+				<div class="absolute top-[395px] left-[160px] mt-10 flex space-x-[20px]">
+					<!-- Testimonial Card 1 -->
+					<div class="relative w-[359px] h-[310px] bg-[#161E25] rounded-lg p-8 flex flex-col items-center text-center testimonial-card-wrapper">
+						<div class="absolute -top-[50px] w-[103px] h-[103px] rounded-full overflow-hidden">
+							<img src="./assets/GallerybgImg.png" alt="Marcus W." class="w-full h-full object-cover">
+						</div>
+						<div class="relative z-10 mt-[50px]">
+							<img src="./assets/Vector.svg" alt="Quote Icon" class="w-[50px] h-[45px] top-[-1px] left-[17px]">
+						</div>
+						<div class="testimonial-card">
+							<p class="font-[Inter] text-white text-[24px] font-bold leading-[29.05px] text-center mb-8 mt-7">
+								I couldn't be any happier. Highly recommended!
+							</p>
+							<p class="text-gray-400 text-center">
+								<span class="font-bold text-xl">Marcus W.</span><br>Developer
+							</p>
+						</div>
+					</div>
+		
+					<!-- Testimonial Card 2 -->
+					<div class="relative w-[359px] h-[310px] bg-[#161E25] rounded-lg p-8 flex flex-col items-center text-center testimonial-card-wrapper">
+						<div class="absolute -top-[50px] w-[103px] h-[103px] rounded-full overflow-hidden">
+							<img src="./assets/GallerybgImg.png" alt="Jessy K." class="w-full h-full object-cover">
+						</div>
+						<div class="relative z-10 mt-[50px]">
+							<img src="./assets/Vector.svg" alt="Quote Icon" class="w-[50px] h-[45px] top-[-1px] left-[17px]">
+						</div>
+						<div class="testimonial-card">
+							<p class="font-[Inter] text-white text-[24px] font-bold leading-[29.05px] text-center mb-8 mt-7">
+								Great service and custom service! Perfect!
+							</p>
+							<p class="text-gray-400 text-center">
+								<span class="font-bold text-xl">Jessy K.</span><br>Front-End Developer
+							</p>
+						</div>
+					</div>
+		
+					<!-- Testimonial Card 3 -->
+					<div class="relative w-[359px] h-[310px] bg-[#161E25] rounded-lg p-8 flex flex-col items-center text-center testimonial-card-wrapper">
+						<div class="absolute -top-[50px] w-[103px] h-[103px] rounded-full overflow-hidden">
+							<img src="./assets/GallerybgImg.png" alt="Marina J." class="w-full h-full object-cover">
+						</div>
+						<div class="relative z-10 mt-[50px]">
+							<img src="./assets/Vector.svg" alt="Quote Icon" class="w-[50px] h-[45px] top-[-1px] left-[17px]">
+						</div>
+						<div class="testimonial-card">
+							<p class="font-[Inter] text-white text-[24px] font-bold leading-[29.05px] text-center mb-8 mt-7">
+								Perfect. Just perfect! I can’t say anything.
+							</p>
+							<p class="text-gray-400 text-center">
+								<span class="font-bold text-xl">Marina J.</span><br>HR Officer
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		
+		</section>
 
 		<!-- Gallery Section (Shan-e-Shafiq) -->
 
@@ -747,5 +844,25 @@
 						console.error("Error:", error);
 					});
 			});
+				document.querySelectorAll('.testimonial-card-wrapper').forEach(card => {
+					card.addEventListener('mousemove', e => {
+						const rect = card.getBoundingClientRect();
+						const x = e.clientX - rect.left;
+						const y = e.clientY - rect.top;
+						const centerX = rect.width / 2;
+						const centerY = rect.height / 2;
+		
+						card.style.setProperty('--tilt-x', (y - centerY) / centerY * 20 + 'deg');
+						card.style.setProperty('--tilt-y', (x - centerX) / centerX * -20 + 'deg');
+					});
+		
+					card.addEventListener('mouseleave', () => {
+						card.style.setProperty('--tilt-x', '0deg');
+						card.style.setProperty('--tilt-y', '0deg');
+					});
+				});
+			
+		
+
 	</script>
 </html>
