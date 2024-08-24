@@ -1,481 +1,722 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<script defer src="script.js"></script>
-	<link rel="stylesheet" href="style.css">
-	<!-- Swiper JS -->
-	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-	<!-- Tailwind CDN -->
-	<script src="https://cdn.tailwindcss.com"></script>
-	<!-- Tailwind config -->
-	<script>
-		tailwind.config = {
-			theme: {
-				fontFamily: {
-					'poppins': ["Poppins", "sans-serif"]
-				},
-				extend: {
-					keyframes: {
-						slide: {
-							'0%': { transform: "translateX(0)" },
-							'100%': { transform: "translateX(-100%)" },
-						}
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script defer src="script.js"></script>
+		<link rel="stylesheet" href="style.css" />
+		<!-- Swiper JS -->
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+		<!-- Tailwind CDN -->
+		<script src="https://cdn.tailwindcss.com"></script>
+		<!-- Tailwind config -->
+		<script>
+			tailwind.config = {
+				theme: {
+					fontFamily: {
+						poppins: ["Poppins", "sans-serif"],
 					},
-					animation: {
-						slide: 'slide 10s linear infinite',
-					}
-				}
-			},
-			variants: {
-				animation: ['responsive', 'hover', 'focus'],
-			},
-			plugins: [
-				function ({ addUtilities }) {
-					addUtilities({
-						'.animation-paused': {
-							'animation-play-state': 'paused',
+					extend: {
+						keyframes: {
+							slide: {
+								"0%": { transform: "translateX(0)" },
+								"100%": { transform: "translateX(-100%)" },
+							},
 						},
-						'.animation-running': {
-							'animation-play-state': 'running',
+						animation: {
+							slide: "slide 10s linear infinite",
 						},
-					}, ['responsive', 'hover']);
+					},
 				},
-			],
-		}
+				variants: {
+					animation: ["responsive", "hover", "focus"],
+				},
+				plugins: [
+					function ({ addUtilities }) {
+						addUtilities(
+							{
+								".animation-paused": {
+									"animation-play-state": "paused",
+								},
+								".animation-running": {
+									"animation-play-state": "running",
+								},
+							},
+							["responsive", "hover"]
+						);
+					},
+				],
+			};
+		</script>
+		<!-- Google fonts Poppins -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+			rel="stylesheet" />
+		<title>ACM</title>
+		<link rel="stylesheet" href="index.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+	</head>
+
+	<body class="bg-black text-white overflow-x-hidden">
+		<nav>Navigation</nav>
+		<section class="h-screen">Landing Section (Hasnat Khalid)</section>
+
+		<!-- Slider Section (Shan-e-Shafiq) -->
+
+		<section class="lg:h-[414px] w-screen justify-center items-center bg-black">
+			<!-- SLIDER -->
+
+			<div class="swiper mySwiper h-full w-full lg:w-[85%] 2xl:w-[1300px]">
+				<div class="swiper-wrapper">
+					<!-- SLIDER ITEMS -->
+
+					<div
+						class="swiper-slide justify-center items-center flex px-[45px] select-none">
+						<div
+							class="bg-[#1B1622] w-full lg:h-[380px] rounded-[16px] p-5 lg:p-[40px] flex flex-col lg:flex-row justify-between">
+							<!-- SLIDER IMAGE CONTAINER -->
+
+							<div
+								class="w-full lg:w-[40%] lg:h-full overflow-hidden rounded-[5px]">
+								<img
+									class="h-full w-full object-cover"
+									src="https://media.istockphoto.com/id/1759436430/photo/back-view-of-a-female-speaker-giving-a-speech-in-front-of-people-at-convention-center.webp?b=1&s=170667a&w=0&k=20&c=nSIt4KkxKZcBvA7Ax3_4gKsbg0M6tqgaPY9Drrgj0bY="
+									alt="Image" />
+							</div>
+
+							<!-- SLIDER TEXT CONTAINER -->
+
+							<div
+								class="h-[50%] lg:h-full w-full lg:w-[60%] flex items-center justify-between px-0 lg:px-10 flex-col mt-10 lg:mt-0">
+								<!-- EVENTS & SEMINARS -->
+								<div
+									class="bg-gradient-to-r from-[#14F195] via-[#80ECFF] via-[#64A8F2] to-[#64A8F2] font-poppins font-bold text-black flex justify-center items-center py-2 px-3 rounded-full text-[16px] text-center">
+									OUR EVENTS & SEMINARS
+								</div>
+
+								<!-- STUDENTS WEEK -->
+								<div>
+									<h1
+										class="font-poppins text-[46px] font-bold text-[#CCCCCC] text-center mt-5 lg:mt-0">
+										Students Week
+									</h1>
+									<p class="text-center text-[#C6C6C6]">
+										Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+										Consequuntur animi doloribus facilis onsequuntur animi
+										doloribus facilis.
+									</p>
+								</div>
+
+								<!-- EXPLORE MORE BUTTON -->
+								<button
+									class="border-2 border-white p-2 rounded-full mt-5 lg:mt-0 hover:shadow-[0_0_15px_2px_#F087FF]">
+									EXPLORE MORE
+								</button>
+							</div>
+						</div>
+					</div>
+					<div
+						class="swiper-slide justify-center items-center flex px-[45px] select-none">
+						<div
+							class="bg-[#1B1622] w-full lg:h-[380px] rounded-[16px] p-5 lg:p-[40px] flex flex-col lg:flex-row justify-between">
+							<!-- SLIDER IMAGE CONTAINER -->
+
+							<div
+								class="w-full lg:w-[40%] lg:h-full overflow-hidden rounded-[5px]">
+								<img
+									class="h-full w-full object-cover"
+									src="https://media.istockphoto.com/id/1759436430/photo/back-view-of-a-female-speaker-giving-a-speech-in-front-of-people-at-convention-center.webp?b=1&s=170667a&w=0&k=20&c=nSIt4KkxKZcBvA7Ax3_4gKsbg0M6tqgaPY9Drrgj0bY="
+									alt="Image" />
+							</div>
+
+							<!-- SLIDER TEXT CONTAINER -->
+
+							<div
+								class="h-[50%] lg:h-full w-full lg:w-[60%] flex items-center justify-between px-0 lg:px-10 flex-col mt-10 lg:mt-0">
+								<!-- EVENTS & SEMINARS -->
+								<div
+									class="bg-gradient-to-r from-[#14F195] via-[#80ECFF] via-[#64A8F2] to-[#64A8F2] font-poppins font-bold text-black flex justify-center items-center py-2 px-3 rounded-full text-[16px] text-center">
+									OUR EVENTS & SEMINARS
+								</div>
+
+								<!-- STUDENTS WEEK -->
+								<div>
+									<h1
+										class="font-poppins text-[46px] font-bold text-[#CCCCCC] text-center mt-5 lg:mt-0">
+										Students Week
+									</h1>
+									<p class="text-center text-[#C6C6C6]">
+										Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+										Consequuntur animi doloribus facilis onsequuntur animi
+										doloribus facilis.
+									</p>
+								</div>
+
+								<!-- EXPLORE MORE BUTTON -->
+								<button
+									class="border border-white p-2 rounded-full mt-5 lg:mt-0">
+									EXPLORE MORE
+								</button>
+							</div>
+						</div>
+					</div>
+					<div
+						class="swiper-slide justify-center items-center flex px-[45px] select-none">
+						<div
+							class="bg-[#1B1622] w-full lg:h-[380px] rounded-[16px] p-5 lg:p-[40px] flex flex-col lg:flex-row justify-between">
+							<!-- SLIDER IMAGE CONTAINER -->
+
+							<div
+								class="w-full lg:w-[40%] lg:h-full overflow-hidden rounded-[5px]">
+								<img
+									class="h-full w-full object-cover"
+									src="https://media.istockphoto.com/id/1759436430/photo/back-view-of-a-female-speaker-giving-a-speech-in-front-of-people-at-convention-center.webp?b=1&s=170667a&w=0&k=20&c=nSIt4KkxKZcBvA7Ax3_4gKsbg0M6tqgaPY9Drrgj0bY="
+									alt="Image" />
+							</div>
+
+							<!-- SLIDER TEXT CONTAINER -->
+
+							<div
+								class="h-[50%] lg:h-full w-full lg:w-[60%] flex items-center justify-between px-0 lg:px-10 flex-col mt-10 lg:mt-0">
+								<!-- EVENTS & SEMINARS -->
+								<div
+									class="bg-gradient-to-r from-[#14F195] via-[#80ECFF] via-[#64A8F2] to-[#64A8F2] font-poppins font-bold text-black flex justify-center items-center py-2 px-3 rounded-full text-[16px] text-center">
+									OUR EVENTS & SEMINARS
+								</div>
+
+								<!-- STUDENTS WEEK -->
+								<div>
+									<h1
+										class="font-poppins text-[46px] font-bold text-[#CCCCCC] text-center mt-5 lg:mt-0">
+										Students Week
+									</h1>
+									<p class="text-center text-[#C6C6C6]">
+										Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+										Consequuntur animi doloribus facilis onsequuntur animi
+										doloribus facilis.
+									</p>
+								</div>
+
+								<!-- EXPLORE MORE BUTTON -->
+								<button
+									class="border border-white p-2 rounded-full mt-5 lg:mt-0">
+									EXPLORE MORE
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- SLIDER BUTTONS -->
+				<div class="swiper-button-next"></div>
+				<div class="swiper-button-prev"></div>
+			</div>
+		</section>
+
+		<!-- Stats + why join acm section (Shan-e-Shafiq) -->
+
+		<section
+			class="w-screen bg-[url('./assets/StatsImg.png')] bg-cover bg-center p-10 lg:p-[120px] flex flex-col items-center justify-center">
+			<!-- COMMUNITY STATS -->
+
+			<div
+				class="flex flex-col lg:flex-row justify-between h-full w-full 2xl:w-[1300px]">
+				<div class="lg:w-[70%] lg:h-full">
+					<h1
+						class="lg:w-[60%] text-center lg:text-start text-[48px] font-bold font-poppins mt-2 Text">
+						Join a community of students
+					</h1>
+				</div>
+				<div
+					class="lg:w-[30%] h-full flex items-center flex-col mt-5 lg:mt-0 stats">
+					<div
+						class="w-full flex flex-col justify-center items-center lg:block">
+						<h1
+							class="text-[98px] font-medium font-poppins bg-clip-text text-transparent bg-gradient-to-r from-[#F087FF] to-[#6E1FCE]"
+							id="totalmembers">
+							0
+						</h1>
+						<p class="text-[#C4C4C4] text-lg">TOTAL</p>
+						<p class="text-[#C4C4C4] text-lg">MEMBERS</p>
+					</div>
+					<div
+						class="w-full flex flex-col justify-center items-center lg:block">
+						<h1
+							class="text-[98px] font-medium font-poppins bg-clip-text text-transparent bg-gradient-to-r from-[#1FCFF1] via-[#1FCFF1] to-[#234CB6]"
+							id="activemembers">
+							0
+						</h1>
+						<p class="text-[#C4C4C4] text-lg">ACTIVE</p>
+						<p class="text-[#C4C4C4] text-lg">MEMBERS</p>
+					</div>
+					<div
+						class="w-full flex flex-col justify-center items-center lg:block">
+						<h1
+							class="text-[98px] font-medium font-poppins bg-clip-text text-transparent bg-gradient-to-r from-[#19FB9B] via-[#199890] to-[#005F59]"
+							id="growthrate">
+							0
+						</h1>
+						<p class="text-[#C4C4C4] text-lg">YEARLY GROWTH RATE</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- WHY JOIN ACM -->
+
+			<div
+				class="flex flex-col lg:flex-row lg:justify-between mt-[150px] w-full 2xl:w-[1300px]">
+				<div class="lg:w-[30%] lg:h-full">
+					<h1
+						class="text-center lg:text-start text-[48px] font-bold font-poppins mt-2 Text">
+						Why to join ACM?
+					</h1>
+				</div>
+				<div
+					class="lg:w-[70%] lg:h-full flex items-center flex-col md:flex-row mt-5 lg:mt-0">
+					<div class="md:w-[50%] h-full sm:mt-[100px]">
+						<div class="w-full h-[50%] p-5">
+							<div class="border-l-4 border-l-[#1FCFF1]">
+								<h1 class="text-3xl font-bold ml-3 Text">Fast</h1>
+							</div>
+							<p class="mt-3 text-[#C4C4C4] text-lg Text">
+								Don’t keep your users waiting. Solana has block times of 400
+								milliseconds — and as hardware gets faster, so will the network.
+							</p>
+						</div>
+						<div class="w-full h-[50%] p-5 md:mt-20">
+							<div class="border-l-4 border-l-[#9945FF]">
+								<h1 class="text-3xl font-bold ml-3 Text">Scalable</h1>
+							</div>
+							<p class="mt-3 text-[#C4C4C4] text-lg Text">
+								Get big, quick. Solana is made to handle thousands of
+								transactions per second, and fees for both developers and users
+								remain less than $0.0025.
+							</p>
+						</div>
+					</div>
+					<div class="md:w-[50%] h-full">
+						<div class="w-full h-[50%] p-5">
+							<div class="border-l-4 border-l-[#FFD512]">
+								<h1 class="text-3xl font-bold ml-3 Text">Decentralized</h1>
+							</div>
+							<p class="mt-3 text-[#C4C4C4] text-lg Text">
+								The Solana network is validated by thousands of nodes that
+								operate independently of each other, ensuring your data remains
+								secure and censorship resistant.
+							</p>
+						</div>
+						<div class="w-full h-[50%] p-5 md:mt-20">
+							<div class="border-l-4 border-l-[#19FB9B]">
+								<h1 class="text-3xl font-bold ml-3 Text">Energy Efficient</h1>
+							</div>
+							<p class="mt-3 text-[#C4C4C4] text-lg Text">
+								Solana’s proof of stake network and other innovations minimize
+								its impact on the environment. Each Solana transaction uses
+								about the same energy as a few Google searches.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section>Testimonials Section (Ali Hamza)</section>
+
+		<!-- Gallery Section (Shan-e-Shafiq) -->
+
+		<section
+			class="w-screen bg-[url('./assets/GallerybgImg.png')] bg-cover bg-center pb-[120px]">
+			<!-- MAIN HEADING -->
+			<div class="p-10 lg:px-[120px]">
+				<h1
+					class="font-poppins text-5xl font-bold text-center lg:text-start Text">
+					Past Events Gallery
+				</h1>
+			</div>
+
+			<!-- SLIDER -->
+			<div class="overflow-hidden py-[40px] w-full flex justify-center group">
+				<!-- SLIDER CARDS CONTAINER -->
+				<div
+					class="flex animate-slide group-hover:animation-paused animation-running">
+					<!-- SLIDER CARDS -->
+					<div
+						class="mx-3 h-[420px] rounded-xl flex flex-col justify-between items-center transition-all">
+						<div
+							class="w-[300px] h-[200px] rounded-[8px] bg-[#19161C] flex flex-col justify-center items-center hover:shadow-[0_0_25px_2px_#F087FF]">
+							<h1 class="text-[40px] text-[#F087FF] font-poppins">1000's</h1>
+							<p
+								class="font-bold text-sm text-[#BABABA] font-poppins text-center">
+								HOUSE PARTICIPANTS
+							</p>
+						</div>
+						<div
+							class="w-[300px] h-[200px] rounded-[8px] bg-[#19161C] flex justify-center items-center overflow-hidden hover:shadow-[0_0_25px_2px_#F087FF]">
+							<img
+								class="w-full h-full object-cover"
+								src="./assets/GalleryImg1.png"
+								alt="image" />
+						</div>
+					</div>
+					<div
+						class="mx-3 w-[600px] h-[420px] rounded-xl transition-all overflow-hidden hover:shadow-[0_0_25px_2px_#F087FF]">
+						<img
+							class="w-full h-full object-cover"
+							src="./assets/GalleryImg2.png"
+							alt="image" />
+					</div>
+					<div
+						class="mx-3 h-[420px] rounded-xl flex flex-col justify-between items-center transition-all">
+						<div
+							class="w-[300px] h-[200px] rounded-[8px] bg-[#19161C] flex justify-center items-center overflow-hidden hover:shadow-[0_0_25px_2px_#F087FF]">
+							<img
+								class="w-full h-full object-cover"
+								src="./assets/GalleryImg3.png"
+								alt="image" />
+						</div>
+						<div
+							class="w-[300px] h-[200px] rounded-[8px] bg-[#19161C] flex flex-col justify-center items-center hover:shadow-[0_0_25px_2px_#F087FF]">
+							<h1 class="text-[40px] text-[#19FB9B] font-poppins">100's</h1>
+							<p
+								class="font-bold text-sm text-[#BABABA] font-poppins text-center">
+								DEVELOPERS BUILDING DURING HACKTOHONS
+							</p>
+						</div>
+					</div>
+					<div
+						class="mx-3 w-[300px] h-[420px] rounded-xl transition-all overflow-hidden hover:shadow-[0_0_25px_2px_#F087FF]">
+						<img
+							class="w-full h-full object-cover"
+							src="./assets/GalleryImg4.png"
+							alt="image" />
+					</div>
+				</div>
+				<!-- SLIDER CARDS CONTAINER -->
+				<div
+					class="flex animate-slide group-hover:animation-paused animation-running">
+					<!-- SLIDER CARDS -->
+					<div
+						class="mx-3 h-[420px] rounded-xl flex flex-col justify-between items-center transition-all">
+						<div
+							class="w-[300px] h-[200px] rounded-[8px] bg-[#19161C] flex flex-col justify-center items-center hover:shadow-[0_0_25px_2px_#F087FF]">
+							<h1 class="text-[40px] text-[#F087FF] font-poppins">1000's</h1>
+							<p
+								class="font-bold text-sm text-[#BABABA] font-poppins text-center">
+								HOUSE PARTICIPANTS
+							</p>
+						</div>
+						<div
+							class="w-[300px] h-[200px] rounded-[8px] bg-[#19161C] flex justify-center items-center overflow-hidden hover:shadow-[0_0_25px_2px_#F087FF]">
+							<img
+								class="w-full h-full object-cover"
+								src="./assets/GalleryImg1.png"
+								alt="image" />
+						</div>
+					</div>
+					<div
+						class="mx-3 w-[600px] h-[420px] rounded-xl transition-all overflow-hidden hover:shadow-[0_0_25px_2px_#F087FF]">
+						<img
+							class="w-full h-full object-cover"
+							src="./assets/GalleryImg2.png"
+							alt="image" />
+					</div>
+					<div
+						class="mx-3 h-[420px] rounded-xl flex flex-col justify-between items-center transition-all">
+						<div
+							class="w-[300px] h-[200px] rounded-[8px] bg-[#19161C] flex justify-center items-center overflow-hidden hover:shadow-[0_0_25px_2px_#F087FF]">
+							<img
+								class="w-full h-full object-cover"
+								src="./assets/GalleryImg3.png"
+								alt="image" />
+						</div>
+						<div
+							class="w-[300px] h-[200px] rounded-[8px] bg-[#19161C] flex flex-col justify-center items-center hover:shadow-[0_0_25px_2px_#F087FF]">
+							<h1 class="text-[40px] text-[#19FB9B] font-poppins">100's</h1>
+							<p
+								class="font-bold text-sm text-[#BABABA] font-poppins text-center">
+								DEVELOPERS BUILDING DURING HACKTOHONS
+							</p>
+						</div>
+					</div>
+					<div
+						class="mx-3 w-[300px] h-[420px] rounded-xl transition-all overflow-hidden hover:shadow-[0_0_25px_2px_#F087FF]">
+						<img
+							class="w-full h-full object-cover"
+							src="./assets/GalleryImg4.png"
+							alt="image" />
+					</div>
+				</div>
+				<!-- SLIDER CARDS CONTAINER -->
+				<div
+					class="flex animate-slide group-hover:animation-paused animation-running">
+					<!-- SLIDER CARDS -->
+					<div
+						class="mx-3 h-[420px] rounded-xl flex flex-col justify-between items-center transition-all">
+						<div
+							class="w-[300px] h-[200px] rounded-[8px] bg-[#19161C] flex flex-col justify-center items-center hover:shadow-[0_0_25px_2px_#F087FF]">
+							<h1 class="text-[40px] text-[#F087FF] font-poppins">1000's</h1>
+							<p
+								class="font-bold text-sm text-[#BABABA] font-poppins text-center">
+								HOUSE PARTICIPANTS
+							</p>
+						</div>
+						<div
+							class="w-[300px] h-[200px] rounded-[8px] bg-[#19161C] flex justify-center items-center overflow-hidden hover:shadow-[0_0_25px_2px_#F087FF]">
+							<img
+								class="w-full h-full object-cover"
+								src="./assets/GalleryImg1.png"
+								alt="image" />
+						</div>
+					</div>
+					<div
+						class="mx-3 w-[600px] h-[420px] rounded-xl transition-all overflow-hidden hover:shadow-[0_0_25px_2px_#F087FF]">
+						<img
+							class="w-full h-full object-cover"
+							src="./assets/GalleryImg2.png"
+							alt="image" />
+					</div>
+					<div
+						class="mx-3 h-[420px] rounded-xl flex flex-col justify-between items-center transition-all">
+						<div
+							class="w-[300px] h-[200px] rounded-[8px] bg-[#19161C] flex justify-center items-center overflow-hidden hover:shadow-[0_0_25px_2px_#F087FF]">
+							<img
+								class="w-full h-full object-cover"
+								src="./assets/GalleryImg3.png"
+								alt="image" />
+						</div>
+						<div
+							class="w-[300px] h-[200px] rounded-[8px] bg-[#19161C] flex flex-col justify-center items-center hover:shadow-[0_0_25px_2px_#F087FF]">
+							<h1 class="text-[40px] text-[#19FB9B] font-poppins">100's</h1>
+							<p
+								class="font-bold text-sm text-[#BABABA] font-poppins text-center">
+								DEVELOPERS BUILDING DURING HACKTOHONS
+							</p>
+						</div>
+					</div>
+					<div
+						class="mx-3 w-[300px] h-[420px] rounded-xl transition-all overflow-hidden hover:shadow-[0_0_25px_2px_#F087FF]">
+						<img
+							class="w-full h-full object-cover"
+							src="./assets/GalleryImg4.png"
+							alt="image" />
+					</div>
+				</div>
+				<!-- SLIDER CARDS CONTAINER -->
+				<div
+					class="flex animate-slide group-hover:animation-paused animation-running">
+					<!-- SLIDER CARDS -->
+					<div
+						class="mx-3 h-[420px] rounded-xl flex flex-col justify-between items-center transition-all">
+						<div
+							class="w-[300px] h-[200px] rounded-[8px] bg-[#19161C] flex flex-col justify-center items-center hover:shadow-[0_0_25px_2px_#F087FF]">
+							<h1 class="text-[40px] text-[#F087FF] font-poppins">1000's</h1>
+							<p
+								class="font-bold text-sm text-[#BABABA] font-poppins text-center">
+								HOUSE PARTICIPANTS
+							</p>
+						</div>
+						<div
+							class="w-[300px] h-[200px] rounded-[8px] bg-[#19161C] flex justify-center items-center overflow-hidden hover:shadow-[0_0_25px_2px_#F087FF]">
+							<img
+								class="w-full h-full object-cover"
+								src="./assets/GalleryImg1.png"
+								alt="image" />
+						</div>
+					</div>
+					<div
+						class="mx-3 w-[600px] h-[420px] rounded-xl transition-all overflow-hidden hover:shadow-[0_0_25px_2px_#F087FF]">
+						<img
+							class="w-full h-full object-cover"
+							src="./assets/GalleryImg2.png"
+							alt="image" />
+					</div>
+					<div
+						class="mx-3 h-[420px] rounded-xl flex flex-col justify-between items-center transition-all">
+						<div
+							class="w-[300px] h-[200px] rounded-[8px] bg-[#19161C] flex justify-center items-center overflow-hidden hover:shadow-[0_0_25px_2px_#F087FF]">
+							<img
+								class="w-full h-full object-cover"
+								src="./assets/GalleryImg3.png"
+								alt="image" />
+						</div>
+						<div
+							class="w-[300px] h-[200px] rounded-[8px] bg-[#19161C] flex flex-col justify-center items-center hover:shadow-[0_0_25px_2px_#F087FF]">
+							<h1 class="text-[40px] text-[#19FB9B] font-poppins">100's</h1>
+							<p
+								class="font-bold text-sm text-[#BABABA] font-poppins text-center">
+								DEVELOPERS BUILDING DURING HACKTOHONS
+							</p>
+						</div>
+					</div>
+					<div
+						class="mx-3 w-[300px] h-[420px] rounded-xl transition-all overflow-hidden hover:shadow-[0_0_25px_2px_#F087FF]">
+						<img
+							class="w-full h-full object-cover"
+							src="./assets/GalleryImg4.png"
+							alt="image" />
+					</div>
+				</div>
+			</div>
+
+			<!-- ITS TIME TO JOIN ..... -->
+			<div class="w-full mt-[100px] p-10 lg:px-[300px]">
+				<h1 class="text-center text-[38px] font-poppins font-bold Text">
+					It's time to join the thousands of creators, artists, and developers
+				</h1>
+			</div>
+
+			<!-- START JOINING BUTTON -->
+
+			<div class="w-full flex justify-center items-center mt-10">
+				<button
+					class="bg-gradient-to-r from-[#F087FF] via-[#6E1FCE] to-[#6E1FCE]/20 rounded-full px-[24px] py-[12px] hover:shadow-[0_0_25px_2px_#F087FF]">
+					START JOINING
+				</button>
+			</div>
+		</section>
+
+		<section class="section">
+			<h1 class="heading">Get in Touch with our <strong> Team</strong>.</h1>
+			<section class="form">
+				<form id="contactForm">
+					<div class="form-group">
+						<input type="text" name="name" id="Name" placeholder="Full Name" />
+					</div>
+
+					<div class="form-group">
+						<input
+							type="email"
+							name="email"
+							id="Email"
+							placeholder="Email Address" />
+					</div>
+
+					<div class="form-group">
+						<input
+							type="tel"
+							name="number"
+							id="Number"
+							placeholder="Phone Number" />
+					</div>
+
+					<div class="form-group">
+						<textarea
+							name="message"
+							id="Message"
+							placeholder="Write Something here..."
+							rows="7"></textarea>
+					</div>
+
+					<button type="submit">SUBMIT NOW</button>
+				</form>
+
+				<div class="image">
+					<img class="img" src="./images/image 48.png" alt="Not Found" />
+					<h1 class="img-text">
+						"Transforming the technical into thrilling adventures"
+					</h1>
+				</div>
+			</section>
+		</section>
+		<footer>
+			<div class="left">
+				<h1 class="foot">We would love to hear from you.</h1>
+
+				<div class="text font">
+					Feel free to reach us if you want to collaborate with us, or simply
+					have a chat.
+				</div>
+
+				<button class="button">
+					Get Membership <i class="fa fa-arrow-right"></i>
+				</button>
+
+				<div class="text font">
+					Don't like the forms? Drop us a line via email.
+				</div>
+				<div class="font">info@acm.com</div>
+
+				<div class="copy">
+					<div class="text font">&copy; ACM 2015. All Rights Reserved.</div>
+					<div class="font privacy">Privacy Policy</div>
+				</div>
+			</div>
+
+			<div class="right">
+				<h2 class="contact">CONTACT US</h2>
+
+				<div class="right-data">
+					<div class="first">
+						<div class="sec">
+							<div class="text font">Our Email</div>
+							<div class="mail">info@acm.com</div>
+						</div>
+
+						<div class="sec">
+							<div class="text font">Our Phone</div>
+							<div class="mail">+971 (17) 101 3457</div>
+						</div>
+					</div>
+
+					<div class="second">
+						<div class="sec">
+							<div class="text font">Villa no. 3 - Street # 17-</div>
+							<div class="text font">Al Bahra 2 - Dubai - United</div>
+							<div class="text font">Arab Emirates</div>
+						</div>
+
+						<div class="sec">
+							<h2 class="follow">FOLLOW US</h2>
+
+							<ul class="icon">
+								<li class="social">
+									<a href="#" class="fa fa-facebook" aria-hidden="true"></a>
+								</li>
+								<li class="social">
+									<a href="#" class="fa fa-twitter" aria-hidden="true"></a>
+								</li>
+								<li class="social">
+									<a href="#" class="fa fa-instagram" aria-hidden="true"></a>
+								</li>
+								<li class="social">
+									<a href="#" class="fa fa-linkedin" aria-hidden="true"></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+	<script>
+		document
+			.getElementById("contactForm")
+			.addEventListener("submit", function (event) {
+				event.preventDefault(); // Prevent the form from submitting in the traditional way
+
+				const formData = new FormData(this);
+
+				fetch("backend.php", {
+					method: "POST",
+					body: formData,
+				})
+					.then((response) => response.text()) // assuming the backend returns a text response
+					.then((data) => {
+						alert("Form submitted successfully!");
+						console.log(data);
+						// Optionally reset the form
+						this.reset();
+					})
+					.catch((error) => {
+						alert("There was an error submitting the form.");
+						console.error("Error:", error);
+					});
+			});
 	</script>
-	<!-- Google fonts Poppins -->
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link
-		href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-		rel="stylesheet">
-	<title>ACM</title>
-</head>
-
-<body class="bg-black text-white overflow-x-hidden">
-	<nav>Navigation</nav>
-	<section class="h-screen">Landing Section (Hasnat Khalid)</section>
-
-
-	<!-- Slider Section (Shan-e-Shafiq) -->
-
-	<section class="lg:h-[414px] w-screen justify-center items-center bg-black">
-
-		<!-- SLIDER -->
-
-		<div class="swiper mySwiper h-full w-full lg:w-[85%] 2xl:w-[1300px]">
-			<div class="swiper-wrapper">
-
-				<!-- SLIDER ITEMS -->
-
-				<div class="swiper-slide justify-center items-center flex px-[45px] select-none">
-
-					<div
-						class="bg-[#1B1622] w-full lg:h-[380px] rounded-[16px] p-5 lg:p-[40px] flex flex-col lg:flex-row justify-between">
-
-						<!-- SLIDER IMAGE CONTAINER -->
-
-						<div class="w-full lg:w-[40%] lg:h-full overflow-hidden rounded-[5px]">
-							<img class="h-full w-full object-cover"
-								src="https://media.istockphoto.com/id/1759436430/photo/back-view-of-a-female-speaker-giving-a-speech-in-front-of-people-at-convention-center.webp?b=1&s=170667a&w=0&k=20&c=nSIt4KkxKZcBvA7Ax3_4gKsbg0M6tqgaPY9Drrgj0bY="
-								alt="Image">
-						</div>
-
-						<!-- SLIDER TEXT CONTAINER -->
-
-						<div
-							class=" h-[50%] lg:h-full w-full lg:w-[60%] flex items-center justify-between px-0 lg:px-10 flex-col mt-10 lg:mt-0">
-
-							<!-- EVENTS & SEMINARS -->
-							<div
-								class="bg-gradient-to-r from-[#14F195] via-[#80ECFF] via-[#64A8F2] to-[#64A8F2] font-poppins font-bold text-black flex justify-center items-center py-2 px-3 rounded-full text-[16px] text-center">
-								OUR EVENTS & SEMINARS</div>
-
-							<!-- STUDENTS WEEK -->
-							<div>
-								<h1 class="font-poppins text-[46px] font-bold text-[#CCCCCC] text-center mt-5 lg:mt-0">
-									Students Week
-								</h1>
-								<p class="text-center text-[#C6C6C6]">Lorem ipsum dolor, sit amet consectetur
-									adipisicing elit.
-									Consequuntur animi doloribus facilis onsequuntur animi doloribus facilis.</p>
-							</div>
-
-							<!-- EXPLORE MORE BUTTON -->
-							<button
-								class="border-2 border-white p-2 rounded-full mt-5 lg:mt-0 hover:shadow-[0_0_15px_2px_#F087FF]">EXPLORE
-								MORE</button>
-
-						</div>
-					</div>
-				</div>
-				<div class="swiper-slide justify-center items-center flex px-[45px] select-none">
-
-					<div
-						class="bg-[#1B1622] w-full lg:h-[380px] rounded-[16px] p-5 lg:p-[40px] flex flex-col lg:flex-row justify-between">
-
-						<!-- SLIDER IMAGE CONTAINER -->
-
-						<div class="w-full lg:w-[40%] lg:h-full overflow-hidden rounded-[5px]">
-							<img class="h-full w-full object-cover"
-								src="https://media.istockphoto.com/id/1759436430/photo/back-view-of-a-female-speaker-giving-a-speech-in-front-of-people-at-convention-center.webp?b=1&s=170667a&w=0&k=20&c=nSIt4KkxKZcBvA7Ax3_4gKsbg0M6tqgaPY9Drrgj0bY="
-								alt="Image">
-						</div>
-
-						<!-- SLIDER TEXT CONTAINER -->
-
-						<div
-							class=" h-[50%] lg:h-full w-full lg:w-[60%] flex items-center justify-between px-0 lg:px-10 flex-col mt-10 lg:mt-0">
-
-							<!-- EVENTS & SEMINARS -->
-							<div
-								class="bg-gradient-to-r from-[#14F195] via-[#80ECFF] via-[#64A8F2] to-[#64A8F2] font-poppins font-bold text-black flex justify-center items-center py-2 px-3 rounded-full text-[16px] text-center">
-								OUR EVENTS & SEMINARS</div>
-
-							<!-- STUDENTS WEEK -->
-							<div>
-								<h1 class="font-poppins text-[46px] font-bold text-[#CCCCCC] text-center mt-5 lg:mt-0">
-									Students Week
-								</h1>
-								<p class="text-center text-[#C6C6C6]">Lorem ipsum dolor, sit amet consectetur
-									adipisicing elit.
-									Consequuntur animi doloribus facilis onsequuntur animi doloribus facilis.</p>
-							</div>
-
-							<!-- EXPLORE MORE BUTTON -->
-							<button class="border border-white p-2 rounded-full mt-5 lg:mt-0">EXPLORE MORE</button>
-
-						</div>
-					</div>
-				</div>
-				<div class="swiper-slide justify-center items-center flex px-[45px] select-none">
-
-					<div
-						class="bg-[#1B1622] w-full lg:h-[380px] rounded-[16px] p-5 lg:p-[40px] flex flex-col lg:flex-row justify-between">
-
-						<!-- SLIDER IMAGE CONTAINER -->
-
-						<div class="w-full lg:w-[40%] lg:h-full overflow-hidden rounded-[5px]">
-							<img class="h-full w-full object-cover"
-								src="https://media.istockphoto.com/id/1759436430/photo/back-view-of-a-female-speaker-giving-a-speech-in-front-of-people-at-convention-center.webp?b=1&s=170667a&w=0&k=20&c=nSIt4KkxKZcBvA7Ax3_4gKsbg0M6tqgaPY9Drrgj0bY="
-								alt="Image">
-						</div>
-
-						<!-- SLIDER TEXT CONTAINER -->
-
-						<div
-							class=" h-[50%] lg:h-full w-full lg:w-[60%] flex items-center justify-between px-0 lg:px-10 flex-col mt-10 lg:mt-0">
-
-							<!-- EVENTS & SEMINARS -->
-							<div
-								class="bg-gradient-to-r from-[#14F195] via-[#80ECFF] via-[#64A8F2] to-[#64A8F2] font-poppins font-bold text-black flex justify-center items-center py-2 px-3 rounded-full text-[16px] text-center">
-								OUR EVENTS & SEMINARS</div>
-
-							<!-- STUDENTS WEEK -->
-							<div>
-								<h1 class="font-poppins text-[46px] font-bold text-[#CCCCCC] text-center mt-5 lg:mt-0">
-									Students Week
-								</h1>
-								<p class="text-center text-[#C6C6C6]">Lorem ipsum dolor, sit amet consectetur
-									adipisicing elit.
-									Consequuntur animi doloribus facilis onsequuntur animi doloribus facilis.</p>
-							</div>
-
-							<!-- EXPLORE MORE BUTTON -->
-							<button class="border border-white p-2 rounded-full mt-5 lg:mt-0">EXPLORE MORE</button>
-
-						</div>
-					</div>
-				</div>
-
-			</div>
-			<!-- SLIDER BUTTONS -->
-			<div class="swiper-button-next"></div>
-			<div class="swiper-button-prev"></div>
-		</div>
-	</section>
-
-	<!-- Stats + why join acm section (Shan-e-Shafiq) -->
-
-	<section
-		class=" w-screen bg-[url('./assets/StatsImg.png')] bg-cover bg-center p-10 lg:p-[120px] flex flex-col items-center justify-center">
-
-		<!-- COMMUNITY STATS -->
-
-		<div class="flex flex-col lg:flex-row justify-between h-full w-full 2xl:w-[1300px]">
-			<div class="lg:w-[70%] lg:h-full">
-				<h1 class="lg:w-[60%] text-center lg:text-start text-[48px] font-bold font-poppins mt-2 Text">
-					Join a community of
-					students</h1>
-			</div>
-			<div class="lg:w-[30%] h-full flex items-center flex-col mt-5 lg:mt-0 stats">
-				<div class="w-full flex flex-col justify-center items-center lg:block">
-					<h1 class="text-[98px] font-medium font-poppins bg-clip-text text-transparent bg-gradient-to-r from-[#F087FF] to-[#6E1FCE]"
-						id="totalmembers">
-						0</h1>
-					<p class="text-[#C4C4C4] text-lg ">TOTAL</p>
-					<p class="text-[#C4C4C4] text-lg ">MEMBERS</p>
-				</div>
-				<div class="w-full flex flex-col justify-center items-center lg:block">
-					<h1 class="text-[98px] font-medium font-poppins bg-clip-text text-transparent bg-gradient-to-r from-[#1FCFF1] via-[#1FCFF1] to-[#234CB6]"
-						id="activemembers">
-						0</h1>
-					<p class="text-[#C4C4C4] text-lg ">ACTIVE</p>
-					<p class="text-[#C4C4C4] text-lg ">MEMBERS</p>
-				</div>
-				<div class="w-full flex flex-col justify-center items-center lg:block">
-					<h1 class="text-[98px] font-medium font-poppins bg-clip-text text-transparent bg-gradient-to-r from-[#19FB9B] via-[#199890] to-[#005F59]"
-						id="growthrate">
-						0</h1>
-					<p class="text-[#C4C4C4] text-lg ">YEARLY GROWTH RATE</p>
-				</div>
-			</div>
-		</div>
-
-		<!-- WHY JOIN ACM -->
-
-		<div class="flex flex-col lg:flex-row lg:justify-between mt-[150px] w-full 2xl:w-[1300px]">
-			<div class="lg:w-[30%] lg:h-full">
-				<h1 class="text-center lg:text-start text-[48px] font-bold font-poppins mt-2 Text">
-					Why to join ACM?</h1>
-			</div>
-			<div class="lg:w-[70%] lg:h-full flex items-center flex-col md:flex-row mt-5 lg:mt-0">
-				<div class="md:w-[50%] h-full sm:mt-[100px]">
-					<div class="w-full h-[50%] p-5">
-						<div class="border-l-4 border-l-[#1FCFF1]">
-							<h1 class="text-3xl font-bold ml-3 Text">Fast</h1>
-						</div>
-						<p class="mt-3 text-[#C4C4C4] text-lg Text">Don’t keep your users waiting.
-							Solana has block times of 400
-							milliseconds — and as hardware
-							gets faster, so will the network.</p>
-					</div>
-					<div class="w-full h-[50%] p-5 md:mt-20">
-						<div class="border-l-4 border-l-[#9945FF]">
-							<h1 class="text-3xl font-bold ml-3 Text">Scalable</h1>
-						</div>
-						<p class="mt-3 text-[#C4C4C4] text-lg Text">Get big, quick. Solana is made to
-							handle thousands of transactions
-							per second, and fees for both
-							developers and users remain less
-							than $0.0025.</p>
-					</div>
-				</div>
-				<div class="md:w-[50%] h-full">
-					<div class="w-full h-[50%] p-5">
-						<div class="border-l-4 border-l-[#FFD512]">
-							<h1 class="text-3xl font-bold ml-3 Text">Decentralized</h1>
-						</div>
-						<p class="mt-3 text-[#C4C4C4] text-lg Text">The Solana network is validated by
-							thousands of nodes that operate
-							independently of each other,
-							ensuring your data remains secure
-							and censorship resistant.</p>
-					</div>
-					<div class="w-full h-[50%] p-5 md:mt-20">
-						<div class="border-l-4 border-l-[#19FB9B]">
-							<h1 class="text-3xl font-bold ml-3 Text">Energy Efficient</h1>
-						</div>
-						<p class="mt-3 text-[#C4C4C4] text-lg Text">Solana’s proof of stake network and
-							other innovations minimize its
-							impact on the environment. Each
-							Solana transaction uses about the
-							same energy as a few Google
-							searches.</p>
-					</div>
-				</div>
-			</div>
-		</div>
-
-	</section>
-
-	<section>Testimonials Section (Ali Hamza)</section>
-
-	<!-- Gallery Section (Shan-e-Shafiq) -->
-
-	<section class=" w-screen bg-[url('./assets/GallerybgImg.png')] bg-cover bg-center pb-[120px]">
-
-		<!-- MAIN HEADING -->
-		<div class="p-10 lg:px-[120px]">
-			<h1 class="font-poppins text-5xl font-bold text-center lg:text-start Text">Past Events Gallery</h1>
-		</div>
-
-		<!-- SLIDER -->
-		<div class="overflow-hidden py-[40px] w-full flex justify-center group">
-
-			<!-- SLIDER CARDS CONTAINER -->
-			<div class="flex animate-slide group-hover:animation-paused animation-running">
-
-				<!-- SLIDER CARDS -->
-				<div class="mx-3 h-[420px] rounded-xl flex flex-col justify-between items-center transition-all">
-					<div
-						class="w-[300px] h-[200px] rounded-[8px] bg-[#19161C] flex flex-col justify-center items-center hover:shadow-[0_0_25px_2px_#F087FF]">
-						<h1 class="text-[40px] text-[#F087FF] font-poppins">1000's</h1>
-						<p class="font-bold text-sm text-[#BABABA] font-poppins text-center">HOUSE PARTICIPANTS</p>
-					</div>
-					<div
-						class="w-[300px] h-[200px] rounded-[8px] bg-[#19161C] flex justify-center items-center overflow-hidden hover:shadow-[0_0_25px_2px_#F087FF]">
-						<img class="w-full h-full object-cover" src="./assets/GalleryImg1.png" alt="image">
-					</div>
-				</div>
-				<div
-					class="mx-3 w-[600px] h-[420px] rounded-xl transition-all overflow-hidden hover:shadow-[0_0_25px_2px_#F087FF]">
-					<img class="w-full h-full object-cover" src="./assets/GalleryImg2.png" alt="image">
-				</div>
-				<div class="mx-3 h-[420px] rounded-xl flex flex-col justify-between items-center transition-all">
-					<div
-						class="w-[300px] h-[200px] rounded-[8px] bg-[#19161C] flex justify-center items-center overflow-hidden hover:shadow-[0_0_25px_2px_#F087FF]">
-						<img class="w-full h-full object-cover" src="./assets/GalleryImg3.png" alt="image">
-					</div>
-					<div
-						class="w-[300px] h-[200px] rounded-[8px] bg-[#19161C] flex flex-col justify-center items-center hover:shadow-[0_0_25px_2px_#F087FF]">
-						<h1 class="text-[40px] text-[#19FB9B] font-poppins">100's</h1>
-						<p class="font-bold text-sm text-[#BABABA] font-poppins text-center">DEVELOPERS BUILDING
-							DURING
-							HACKTOHONS</p>
-					</div>
-				</div>
-				<div
-					class="mx-3 w-[300px] h-[420px] rounded-xl transition-all overflow-hidden hover:shadow-[0_0_25px_2px_#F087FF]">
-					<img class="w-full h-full object-cover" src="./assets/GalleryImg4.png" alt="image">
-				</div>
-			</div>
-			<!-- SLIDER CARDS CONTAINER -->
-			<div class="flex animate-slide group-hover:animation-paused animation-running">
-
-				<!-- SLIDER CARDS -->
-				<div class="mx-3 h-[420px] rounded-xl flex flex-col justify-between items-center transition-all">
-					<div
-						class="w-[300px] h-[200px] rounded-[8px] bg-[#19161C] flex flex-col justify-center items-center hover:shadow-[0_0_25px_2px_#F087FF]">
-						<h1 class="text-[40px] text-[#F087FF] font-poppins">1000's</h1>
-						<p class="font-bold text-sm text-[#BABABA] font-poppins text-center">HOUSE PARTICIPANTS</p>
-					</div>
-					<div
-						class="w-[300px] h-[200px] rounded-[8px] bg-[#19161C] flex justify-center items-center overflow-hidden hover:shadow-[0_0_25px_2px_#F087FF]">
-						<img class="w-full h-full object-cover" src="./assets/GalleryImg1.png" alt="image">
-					</div>
-				</div>
-				<div
-					class="mx-3 w-[600px] h-[420px] rounded-xl transition-all overflow-hidden hover:shadow-[0_0_25px_2px_#F087FF]">
-					<img class="w-full h-full object-cover" src="./assets/GalleryImg2.png" alt="image">
-				</div>
-				<div class="mx-3 h-[420px] rounded-xl flex flex-col justify-between items-center transition-all">
-					<div
-						class="w-[300px] h-[200px] rounded-[8px] bg-[#19161C] flex justify-center items-center overflow-hidden hover:shadow-[0_0_25px_2px_#F087FF]">
-						<img class="w-full h-full object-cover" src="./assets/GalleryImg3.png" alt="image">
-					</div>
-					<div
-						class="w-[300px] h-[200px] rounded-[8px] bg-[#19161C] flex flex-col justify-center items-center hover:shadow-[0_0_25px_2px_#F087FF]">
-						<h1 class="text-[40px] text-[#19FB9B] font-poppins">100's</h1>
-						<p class="font-bold text-sm text-[#BABABA] font-poppins text-center">DEVELOPERS BUILDING
-							DURING
-							HACKTOHONS</p>
-					</div>
-				</div>
-				<div
-					class="mx-3 w-[300px] h-[420px] rounded-xl transition-all overflow-hidden hover:shadow-[0_0_25px_2px_#F087FF]">
-					<img class="w-full h-full object-cover" src="./assets/GalleryImg4.png" alt="image">
-				</div>
-			</div>
-			<!-- SLIDER CARDS CONTAINER -->
-			<div class="flex animate-slide group-hover:animation-paused animation-running">
-
-				<!-- SLIDER CARDS -->
-				<div class="mx-3 h-[420px] rounded-xl flex flex-col justify-between items-center transition-all">
-					<div
-						class="w-[300px] h-[200px] rounded-[8px] bg-[#19161C] flex flex-col justify-center items-center hover:shadow-[0_0_25px_2px_#F087FF]">
-						<h1 class="text-[40px] text-[#F087FF] font-poppins">1000's</h1>
-						<p class="font-bold text-sm text-[#BABABA] font-poppins text-center">HOUSE PARTICIPANTS</p>
-					</div>
-					<div
-						class="w-[300px] h-[200px] rounded-[8px] bg-[#19161C] flex justify-center items-center overflow-hidden hover:shadow-[0_0_25px_2px_#F087FF]">
-						<img class="w-full h-full object-cover" src="./assets/GalleryImg1.png" alt="image">
-					</div>
-				</div>
-				<div
-					class="mx-3 w-[600px] h-[420px] rounded-xl transition-all overflow-hidden hover:shadow-[0_0_25px_2px_#F087FF]">
-					<img class="w-full h-full object-cover" src="./assets/GalleryImg2.png" alt="image">
-				</div>
-				<div class="mx-3 h-[420px] rounded-xl flex flex-col justify-between items-center transition-all">
-					<div
-						class="w-[300px] h-[200px] rounded-[8px] bg-[#19161C] flex justify-center items-center overflow-hidden hover:shadow-[0_0_25px_2px_#F087FF]">
-						<img class="w-full h-full object-cover" src="./assets/GalleryImg3.png" alt="image">
-					</div>
-					<div
-						class="w-[300px] h-[200px] rounded-[8px] bg-[#19161C] flex flex-col justify-center items-center hover:shadow-[0_0_25px_2px_#F087FF]">
-						<h1 class="text-[40px] text-[#19FB9B] font-poppins">100's</h1>
-						<p class="font-bold text-sm text-[#BABABA] font-poppins text-center">DEVELOPERS BUILDING
-							DURING
-							HACKTOHONS</p>
-					</div>
-				</div>
-				<div
-					class="mx-3 w-[300px] h-[420px] rounded-xl transition-all overflow-hidden hover:shadow-[0_0_25px_2px_#F087FF]">
-					<img class="w-full h-full object-cover" src="./assets/GalleryImg4.png" alt="image">
-				</div>
-			</div>
-			<!-- SLIDER CARDS CONTAINER -->
-			<div class="flex animate-slide group-hover:animation-paused animation-running">
-
-				<!-- SLIDER CARDS -->
-				<div class="mx-3 h-[420px] rounded-xl flex flex-col justify-between items-center transition-all">
-					<div
-						class="w-[300px] h-[200px] rounded-[8px] bg-[#19161C] flex flex-col justify-center items-center hover:shadow-[0_0_25px_2px_#F087FF]">
-						<h1 class="text-[40px] text-[#F087FF] font-poppins">1000's</h1>
-						<p class="font-bold text-sm text-[#BABABA] font-poppins text-center">HOUSE PARTICIPANTS</p>
-					</div>
-					<div
-						class="w-[300px] h-[200px] rounded-[8px] bg-[#19161C] flex justify-center items-center overflow-hidden hover:shadow-[0_0_25px_2px_#F087FF]">
-						<img class="w-full h-full object-cover" src="./assets/GalleryImg1.png" alt="image">
-					</div>
-				</div>
-				<div
-					class="mx-3 w-[600px] h-[420px] rounded-xl transition-all overflow-hidden hover:shadow-[0_0_25px_2px_#F087FF]">
-					<img class="w-full h-full object-cover" src="./assets/GalleryImg2.png" alt="image">
-				</div>
-				<div class="mx-3 h-[420px] rounded-xl flex flex-col justify-between items-center transition-all">
-					<div
-						class="w-[300px] h-[200px] rounded-[8px] bg-[#19161C] flex justify-center items-center overflow-hidden hover:shadow-[0_0_25px_2px_#F087FF]">
-						<img class="w-full h-full object-cover" src="./assets/GalleryImg3.png" alt="image">
-					</div>
-					<div
-						class="w-[300px] h-[200px] rounded-[8px] bg-[#19161C] flex flex-col justify-center items-center hover:shadow-[0_0_25px_2px_#F087FF]">
-						<h1 class="text-[40px] text-[#19FB9B] font-poppins">100's</h1>
-						<p class="font-bold text-sm text-[#BABABA] font-poppins text-center">DEVELOPERS BUILDING
-							DURING
-							HACKTOHONS</p>
-					</div>
-				</div>
-				<div
-					class="mx-3 w-[300px] h-[420px] rounded-xl transition-all overflow-hidden hover:shadow-[0_0_25px_2px_#F087FF]">
-					<img class="w-full h-full object-cover" src="./assets/GalleryImg4.png" alt="image">
-				</div>
-			</div>
-		</div>
-
-		<!-- ITS TIME TO JOIN ..... -->
-		<div class="w-full mt-[100px] p-10 lg:px-[300px]">
-			<h1 class="text-center text-[38px] font-poppins font-bold Text">It's time to join the thousands of creators,
-				artists, and developers</h1>
-		</div>
-
-		<!-- START JOINING BUTTON -->
-
-		<div class="w-full flex justify-center items-center mt-10">
-			<button
-				class="bg-gradient-to-r from-[#F087FF] via-[#6E1FCE] to-[#6E1FCE]/20 rounded-full px-[24px] py-[12px] hover:shadow-[0_0_25px_2px_#F087FF]">
-				START JOINING
-			</button>
-		</div>
-
-	</section>
-
-	<section>Contact Form Section (Arooj Fatima)</section>
-	<footer>Footer (Arooj Fatima)</footer>
-</body>
-
 </html>
