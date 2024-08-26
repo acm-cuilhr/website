@@ -24,7 +24,7 @@ function NumberAnimation(limit, increment, element, suffix) {
             }
             clearInterval(myinterval)
         }
-    }, 5);
+    }, 10);
 }
 
 const totalmembers = document.getElementById('totalmembers')
@@ -36,9 +36,11 @@ let temp = 0
 
 const Textobserver = new IntersectionObserver(entries => {
     entries.forEach(entry => {
-        entry.target.classList.toggle('animateText', entry.isIntersecting)
+        if (!entry.target.classList.contains('animateText', entry.isIntersecting)) {
+            entry.target.classList.toggle('animateText', entry.isIntersecting)
+        }
     })
-})
+}, { threshold: 0.2 })
 
 const Statsobserver = new IntersectionObserver(entries => {
     entries.forEach(entry => {
@@ -49,7 +51,7 @@ const Statsobserver = new IntersectionObserver(entries => {
             temp = 1
         }
     })
-}, { threshold: 1 })
+}, { threshold: 0.5 })
 
 Statsobserver.observe(stats)
 myText.forEach(e => {
