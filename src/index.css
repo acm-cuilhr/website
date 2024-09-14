@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+	@apply p-0 m-0 font-poppins;
+}
+
+/* CSS FOR SCROLLBAR */
+
+::-webkit-scrollbar {
+	width: 8px;
+	background-color: #1B1622;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #6E1FCE;
+}
+
+
+/* CSS FOR HAMBURGER ICON */
+
+#checkbox {
+	display: none;
+}
+
+.toggle {
+	position: relative;
+	width: 40px;
+	height: 30px;
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 7px;
+	transition-duration: .5s;
+}
+
+.bars {
+	width: 100%;
+	height: 4px;
+	background-color: rgb(176, 92, 255);
+	border-radius: 4px;
+}
+
+#bar2 {
+	transition-duration: .8s;
+}
+
+#bar1,
+#bar3 {
+	width: 70%;
+}
+
+#checkbox:checked+.toggle .bars {
+	position: absolute;
+	transition-duration: .5s;
+}
+
+#checkbox:checked+.toggle #bar2 {
+	transform: scaleX(0);
+	transition-duration: .5s;
+}
+
+#checkbox:checked+.toggle #bar1 {
+	width: 100%;
+	transform: rotate(45deg);
+	transition-duration: .5s;
+}
+
+#checkbox:checked+.toggle #bar3 {
+	width: 100%;
+	transform: rotate(-45deg);
+	transition-duration: .5s;
+}
+
+#checkbox:checked+.toggle {
+	transition-duration: .5s;
+	transform: rotate(180deg);
+}
+
+/* CSS TO REMOVE UP DOWN BUTTONS ON NUMBER INPUT FIELD */
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+/* CSS FOR FLIPPING CARD */
+
+.card {
+	width: 300px;
+	height: 350px;
+	perspective: 1000px;
+}
+
+.card-inner {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	transform-style: preserve-3d;
+	transition: transform 0.999s;
+}
+
+.cardRotate {
+	transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+}
+
+.card-front {
+	background-color: #000;
+	color: #fff;
+	display: flex;
+	align-items: center;
+	border-radius: 10px;
+	justify-content: center;
+	font-size: 24px;
+	transform: rotateY(0deg);
+}
+
+.card-back {
+	background-color: #111025;
+	color: #fff;
+	display: flex;
+	align-items: center;
+	border-radius: 10px;
+	justify-content: center;
+	font-size: 24px;
+	transform: rotateY(180deg);
+}

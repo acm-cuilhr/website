@@ -1,35 +1,47 @@
 /** @type {import('tailwindcss').Config} */
+import defaultTheme from "tailwindcss/defaultTheme";
+import colors from "tailwindcss/colors";
+import flattenColorPalette from "tailwindcss/lib/util/flattenColorPalette";
 module.exports = {
-    content: [],
-    theme: {
-        fontFamily: {
-            'poppins': ["Poppins", "sans-serif"]
-        },
-        extend: {
-            keyframes: {
-                slide: {
-                    '0%': { transform: "translateX(0)" },
-                    '100%': { transform: "translateX(-100%)" },
-                }
-            },
-            animation: {
-                slide: 'slide 5s linear infinite',
-            }
-        }
+  content: [
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/**/*.{js,ts,jsx,tsx}",
+    "./index.html"
+  ],
+  darkMode: "class",
+  theme: {
+    fontFamily: {
+      'poppins': ["Poppins", "sans-serif"]
     },
-    variants: {
-        animation: ['responsive', 'hover', 'focus'],
-    },
-    plugins: [
-        function ({ addUtilities }) {
-            addUtilities({
-                '.animation-paused': {
-                    'animation-play-state': 'paused',
-                },
-                '.animation-running': {
-                    'animation-play-state': 'running',
-                },
-            }, ['responsive', 'hover']);
+    extend: {
+      animation: {
+        scroll:
+          "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
+      },
+      keyframes: {
+        scroll: {
+          to: {
+            transform: "translate(calc(-50% - 0.5rem))",
+          },
         },
-    ],
+      },
+    },
+  },
+  plugins: [addVariablesForColors],
+
+};
+
+
+function addVariablesForColors({ addBase, theme }) {
+  let allColors = flattenColorPalette(theme("colors"));
+  let newVars = Object.fromEntries(
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+  );
+
+  addBase({
+    ":root": newVars,
+  });
 }
