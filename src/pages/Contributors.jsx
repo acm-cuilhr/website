@@ -7,9 +7,6 @@ import ContributorSection from '../components/ContributorSection'
 export default function Contributors() {
     return (
         <>
-            {/* NAVIGATION BAR */}
-            <Navbar />
-
             {/* HERO SECTION */}
             <ContributorsHeroSection />
 
@@ -18,7 +15,6 @@ export default function Contributors() {
 
             {/* FOOTER SECTION */}
             <FooterSection />
-
         </>
     )
 }

@@ -1,7 +1,11 @@
+import { section } from 'framer-motion/client'
 import React from 'react'
 
 export default function Events() {
     return (
-        <div>Events</div>
+        <>
+            <section className='h-screen'></section>
+            <section className='h-screen'></section>
+        </>
     )
 }

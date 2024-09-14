@@ -17,9 +17,6 @@ export default function Team() {
 
     return (
         <>
-            {/* NAVIGATION BAR */}
-            <Navbar />
-
             {/* HERO SECTION */}
             <TeamHeroSection />
 

@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { motion } from 'framer-motion'
 
 export default function TeamMemberCards(props) {
 
@@ -7,7 +8,12 @@ export default function TeamMemberCards(props) {
 
     return (
 
-        <div className="card cursor-pointer" onClick={() => { setFlip(!Flip) }} >
+        <motion.div className="card cursor-pointer" onClick={() => { setFlip(!Flip) }}
+            initial={{ scale: 0 }}
+            whileInView={{ scale: 1 }}
+            transition={{ type: 'spring', duration: 0.8 }}
+
+        >
             <div class={`card-inner ${Flip ? 'cardRotate' : null}`}>
 
                 {/* CARD FRONT SIDE */}
@@ -27,7 +33,7 @@ export default function TeamMemberCards(props) {
                         </div>
 
                         {/* MEMBER POSITION */}
-                        <h1 className='bg-clip-text text-transparent bg-gradient-to-b from-[#E64467] to-[#7E5CC5] font-bold text-2xl mt-3'>{currentPosition}</h1>
+                        <h1 className='bg-clip-text text-transparent bg-gradient-to-b from-[#E64467] to-[#7E5CC5] font-bold text-2xl mt-4'>{currentPosition}</h1>
 
                         {/* MEMBER NAME */}
                         <h1 className='text-lg font-semibold text-white mt-2'>{name}</h1>
@@ -85,6 +91,6 @@ export default function TeamMemberCards(props) {
             </div>
 
 
-        </div>
+        </motion.div>
     )
 }

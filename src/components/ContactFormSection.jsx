@@ -1,6 +1,8 @@
 import React, { useRef, useState } from 'react'
 import FormInput from './FormInput'
 import TextArea from './TextArea'
+import { motion } from 'framer-motion'
+
 
 export default function ContactFormSection() {
 
@@ -51,12 +53,16 @@ export default function ContactFormSection() {
 
 
     return (
-        <section className='bg-[#1B1622] p-5 md:p-10 lg:p-[120px] py-10 flex justify-center items-center'>
+        <section className='bg-[#1B1622] px-5 py-14 md:px-10 md:py-[80px] lg:px-[120px] lg:py-[120px] flex justify-center items-center'>
             <div className="flex flex-col w-full xl:w-[1300px]">
 
                 {/* HEADING */}
                 <div className="flex flex-col mt-10 lg:mt-0">
-                    <h1 className="font-poppins text-[32px] md:text-[48px] font-bold text-center lg:text-start text-white">Get in Touch with our <span className='bg-clip-text text-transparent bg-gradient-to-b from-[#D471F4] to-[#6F20CE]'>Team</span>.</h1>
+                    <motion.h1 className="font-poppins text-[32px] md:text-[48px] font-bold text-center lg:text-start text-white"
+                        initial={{ x: -100, opacity: 0 }}
+                        whileInView={{ x: 0, opacity: 1 }}
+                        transition={{ type: 'spring' }}
+                    >Get in Touch with our <span className='bg-clip-text text-transparent bg-gradient-to-b from-[#D471F4] to-[#6F20CE]'>Team</span>.</motion.h1>
                 </div>
 
                 {/* FORM CONTAINER */}
@@ -111,7 +117,8 @@ export default function ContactFormSection() {
                             errorStatement="Message should not be less that two characters"
                         />
 
-                        <div className="w-full flex justify-start mt-4">
+                        <div className="w-full flex justify-start mt-4"
+                        >
                             <button
                                 className={`rounded-full w-[140px] md:w-[160px] h-10 md:h-12 ml-1 bg-gradient-to-r from-[#F087FF] via-[#6E1FCE] to-[#6E1FCE33] text-white ${disableButton ? 'opacity-50' : 'hover:shadow-[0_0_15px_2px_#F087FF]'}`}
                                 disabled={disableButton}
@@ -122,12 +129,16 @@ export default function ContactFormSection() {
                     </div>
 
                     {/* IMAGE */}
-                    <div className="w-full lg:w-[48%] h-[400px] overflow-hidden rounded-xl relative">
+                    <motion.div className="w-full lg:w-[48%] h-[400px] overflow-hidden rounded-xl relative"
+                        initial={{ scale: 0 }}
+                        whileInView={{ scale: 1 }}
+                        transition={{ type: 'spring' }}
+                    >
                         <img className='w-full h-full object-cover' src="./assets/contact-form-img.png" alt="" />
                         <div className="absolute bottom-10 px-10 w-full flex justify-center items-center">
                             <span className='text-center text-2xl font-bold text-white'>“Transforming the technical into thrilling adventures”</span>
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
         </section>

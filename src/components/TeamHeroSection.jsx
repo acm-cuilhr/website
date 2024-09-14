@@ -1,10 +1,15 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 
 export default function TeamHeroSection() {
     return (
         <section className='h-screen bg-[url("./assets/GallerybgImg.png")] bg-no-repeat bg-cover bg-center flex flex-col items-center px-5 md:px-10 lg:px-0'>
 
-            <div className="mt-[25vh]">
+            <motion.div className="mt-[15vh] md:mt-[25vh]"
+                initial={{ scale: 0 }}
+                whileInView={{ scale: 1 }}
+                transition={{ type: 'spring', duration: 0.8 }}
+            >
 
                 {/* ACM HEADING */}
                 <div className="flex items-center flex-col lg:flex-row">
@@ -18,7 +23,7 @@ export default function TeamHeroSection() {
                     RESPONSIBLE FOR MAKING THE MAGIC HAPPEN
                 </div>
 
-            </div>
+            </motion.div>
 
         </section>
     )

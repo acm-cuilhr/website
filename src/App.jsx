@@ -5,10 +5,13 @@ import Home from "./pages/Home";
 import Events from "./pages/Events";
 import Contributors from "./pages/Contributors";
 import Team from "./pages/Team";
+import Navbar from "./components/Navbar";
 
 function App() {
 	return (
 		<>
+			{/* NAVIGATION BAR */}
+			<Navbar />
 			<Routes>
 				<Route path="/" element={<Home />} />
 				<Route path="/events" element={<Events />} />

@@ -1,10 +1,15 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 
 export default function ContributorsHeroSection() {
     return (
         <section className='h-[70vh] lg:h-screen bg-[url("./assets/GallerybgImg.png")] bg-no-repeat bg-cover bg-center flex flex-col items-center px-5 md:px-10 lg:px-0'>
 
-            <div className="mt-[20vh]">
+            <motion.div className="mt-[20vh]"
+                initial={{ scale: 0 }}
+                whileInView={{ scale: 1 }}
+                transition={{ type: 'spring', duration: 0.8 }}
+            >
 
                 {/* ACM HEADING */}
                 <div className="flex items-center flex-col">
@@ -16,7 +21,7 @@ export default function ContributorsHeroSection() {
                 <div className="text-white font-light md:text-xl lg:text-4xl tracking-widest text-center mt-5">
                     THE CREATORS BEHIND EVERY PIXEL AND LINE OF CODE
                 </div>
-            </div>
+            </motion.div>
 
         </section>
     )

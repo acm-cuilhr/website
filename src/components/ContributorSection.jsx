@@ -28,7 +28,7 @@ export default function ContributorSection() {
     // RETURN
 
     return (
-        <section className='flex justify-center items-center px-5 md:px-10 lg:px-[120px] pb-20'>
+        <section className='flex justify-center items-center px-5 py-10 md:px-10 md:py-[80px] lg:px-[120px] lg:py-[120px]'>
             <div className="w-full xl:w-[1300px] flex flex-wrap flex-row gap-6 items-center justify-center">
                 {
                     ContributorsData.map((contributor, index) => {

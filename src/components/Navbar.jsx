@@ -1,10 +1,13 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { motion } from 'framer-motion'
 
-const Navbar = () => {
+export default function Navbar() {
 
     const [OpenNavbar, setOpenNavbar] = useState(false)
+    const location = useLocation()
+
+    console.log(location.pathname)
 
     return (
         <header>
@@ -23,10 +26,31 @@ const Navbar = () => {
 
                     {/* NAVBAR ITEMS FOR TABLET AND DESKTOP RESOULTIONS */}
                     <div className={`${window.innerWidth <= 480 ? 'hidden' : 'flex'} flex-row text-[#E4E4E4] font-bold items-center text-lg `}>
-                        <Link className="" to={'/'}>Home</Link>
-                        <Link className="md:ml-10" to={'/events'}>Events</Link>
-                        <Link className="md:ml-10" to={'/team'}>Team</Link>
-                        <Link className="md:ml-10" to={'/contributors'}>Contributors</Link>
+                        <motion.div
+                            className={``}
+                            whileHover={{ scale: 1.25 }}
+                            transition={{ type: 'spring' }}
+                        >
+                            <Link className={`${location.pathname == '/' ? 'bg-clip-text text-transparent bg-gradient-to-r from-[#D471F4] to-[#6F20CE]' : null}`} to={'/'}>Home</Link>
+                        </motion.div>
+                        <motion.div
+                            whileHover={{ scale: 1.25 }}
+                            transition={{ type: 'spring' }}
+                        >
+                            <Link className={`md:ml-10 ${location.pathname == '/events' ? 'bg-clip-text text-transparent bg-gradient-to-r from-[#D471F4] to-[#6F20CE]' : null}`} to={'/events'}>Events</Link>
+                        </motion.div>
+                        <motion.div
+                            whileHover={{ scale: 1.25 }}
+                            transition={{ type: 'spring' }}
+                        >
+                            <Link className={`md:ml-10 ${location.pathname == '/team' ? 'bg-clip-text text-transparent bg-gradient-to-r from-[#D471F4] to-[#6F20CE]' : null}`} to={'/team'}>Team</Link>
+                        </motion.div>
+                        <motion.div
+                            whileHover={{ scale: 1.25 }}
+                            transition={{ type: 'spring' }}
+                        >
+                            <Link className={`md:ml-10 ${location.pathname == '/contributors' ? 'bg-clip-text text-transparent bg-gradient-to-r from-[#D471F4] to-[#6F20CE]' : null}`} to={'/contributors'}>Contributors</Link>
+                        </motion.div>
                     </div>
 
                     {/* HAMBURGER ICON */}
@@ -43,15 +67,34 @@ const Navbar = () => {
 
                 {/* NAVBAR ITEMS FOR MOBILE RESOLUTIONS ENCLOSED BY HAMBURGER ICON */}
                 <div className={`${window.innerWidth > 480 ? 'hidden' : 'flex'} flex-col text-[#E4E4E4] font-bold text-lg justify-center items-center`}>
-                    <Link className="mt-2" to={'/'}>Home</Link>
-                    <Link className="mt-2" to={'/events'}>Events</Link>
-                    <Link className="mt-2" to={'/team'}>Team</Link>
-                    <Link className="mt-2" to={'/contributors'}>Contributors</Link>
+                    <motion.div
+                        className={``}
+                        whileTap={{ scale: 1.45 }}
+                        transition={{ type: 'spring' }}
+                    >
+                        <Link className={`mt-2 ${location.pathname == '/' ? 'bg-clip-text text-transparent bg-gradient-to-r from-[#D471F4] to-[#6F20CE]' : null}`} to={'/'}>Home</Link>
+                    </motion.div>
+                    <motion.div
+                        whileTap={{ scale: 1.45 }}
+                        transition={{ type: 'spring' }}
+                    >
+                        <Link className={`mt-2 ${location.pathname == '/events' ? 'bg-clip-text text-transparent bg-gradient-to-r from-[#D471F4] to-[#6F20CE]' : null}`} to={'/events'}>Events</Link>
+                    </motion.div>
+                    <motion.div
+                        whileTap={{ scale: 1.45 }}
+                        transition={{ type: 'spring' }}
+                    >
+                        <Link className={`mt-2 ${location.pathname == '/team' ? 'bg-clip-text text-transparent bg-gradient-to-r from-[#D471F4] to-[#6F20CE]' : null}`} to={'/team'}>Team</Link>
+                    </motion.div>
+                    <motion.div
+                        whileTap={{ scale: 1.45 }}
+                        transition={{ type: 'spring' }}
+                    >
+                        <Link className={`mt-2 ${location.pathname == '/contributors' ? 'bg-clip-text text-transparent bg-gradient-to-r from-[#D471F4] to-[#6F20CE]' : null}`} to={'/contributors'}>Contributors</Link>
+                    </motion.div>
                 </div>
 
             </motion.nav>
         </header>
     )
 }
-
-export default React.memo(Navbar)

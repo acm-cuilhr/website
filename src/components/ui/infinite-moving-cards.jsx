@@ -69,7 +69,7 @@ export const InfiniteMovingCards = ({
                     item.cardType == "double" ?
 
                         // DOUBLE GALLERY CARD
-                        <div className={`mx-3 h-[420px] rounded-xl flex ${item.isReversed ? 'flex-col-reverse' : 'flex-col'} justify-between items-center transition-all`}>
+                        <div key={item.id} className={`mx-3 h-[420px] rounded-xl flex ${item.isReversed ? 'flex-col-reverse' : 'flex-col'} justify-between items-center transition-all`}>
                             <div className="w-[300px] h-[200px] rounded-[8px] bg-[#19161C] flex flex-col justify-center items-center hover:shadow-[0_0_25px_2px_#F087FF] transition duration-300">
                                 <h1 className={`text-[40px] ${item.isReversed ? 'text-[#19FB9B]' : 'text-[#F087FF] '} font-poppins`}>{item.ImgDescriptionStats}</h1>
                                 <p className="font-bold text-sm text-[#BABABA] font-poppins text-center">
@@ -82,7 +82,7 @@ export const InfiniteMovingCards = ({
                         </div>
                         :
                         // SINGLE GALLERY CARD
-                        <div className="mx-3 w-[600px] h-[420px] rounded-xl transition-all overflow-hidden hover:shadow-[0_0_25px_2px_#F087FF] duration-300">
+                        <div key={item.id} className="mx-3 w-[600px] h-[420px] rounded-xl transition-all overflow-hidden hover:shadow-[0_0_25px_2px_#F087FF] duration-300">
                             <img className="w-full h-full object-cover" src={item.cardImg} alt="image" />
                         </div>
                 ))}
