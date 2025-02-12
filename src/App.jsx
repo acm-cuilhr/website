@@ -1,11 +1,9 @@
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import { Route, Routes } from "react-router-dom"
-import Home from "./pages/Home";
-import Events from "./pages/Events";
-import Contributors from "./pages/Contributors";
-import Team from "./pages/Team";
+import { Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import Contributors from "./pages/Contributors";
+import Events from "./pages/Events";
+import Home from "./pages/Home";
+import Team from "./pages/Team";
 
 function App() {
 	return (
