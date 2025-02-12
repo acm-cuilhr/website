@@ -27,7 +27,7 @@ export default function SliderItem(props) {
                             {eventName}
                         </h1>
                         <p className="text-center text-[#C6C6C6] mt-2">
-                            {description.slice(0, 140)} .....
+                            {description.slice(0, 175)} .....
                         </p>
                     </div>
 

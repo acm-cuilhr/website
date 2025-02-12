@@ -28,15 +28,14 @@ export default function WhyJoinACM() {
                                 initial={{ opacity: 0 }}
                                 whileInView={{ opacity: 1 }}
                                 transition={{ type: 'spring', duration: 1 }}
-                            >Fast</motion.h1>
+                            >Exclusive Tech Competitions</motion.h1>
                         </motion.div>
                         <motion.p className="mt-3 text-[#C4C4C4] md:text-lg"
                             initial={{ y: 50, opacity: 0 }}
                             whileInView={{ y: 0, opacity: 1 }}
                             transition={{ type: 'spring', duration: 1 }}
                         >
-                            Don’t keep your users waiting. Solana has block times of 400
-                            milliseconds — and as hardware gets faster, so will the network.
+                            Participate in coding contests, hackathons, and innovative competitions to test and enhance your technical skills.
                         </motion.p>
                     </div>
                     <div className="w-full h-[50%] p-5 md:mt-20">
@@ -50,16 +49,14 @@ export default function WhyJoinACM() {
                                 initial={{ opacity: 0 }}
                                 whileInView={{ opacity: 1 }}
                                 transition={{ type: 'spring', duration: 1 }}
-                            >Scalable</motion.h1>
+                            >Workshops & Learning Sessions</motion.h1>
                         </motion.div>
                         <motion.p className="mt-3 text-[#C4C4C4] md:text-lg"
                             initial={{ y: 50, opacity: 0 }}
                             whileInView={{ y: 0, opacity: 1 }}
                             transition={{ type: 'spring', duration: 1 }}
                         >
-                            Get big, quick. Solana is made to handle thousands of
-                            transactions per second, and fees for both developers and users
-                            remain less than $0.0025.
+                            Gain hands-on experience through expert-led workshops, seminars, and training sessions on the latest technologies.
                         </motion.p>
                     </div>
                 </div>
@@ -71,20 +68,18 @@ export default function WhyJoinACM() {
                             whileInView={{ width: 'fit-content' }}
                             transition={{ type: 'spring', duration: 1 }}
                         >
-                            <motion.h1 className="text-2xl md:text-3xl font-bold ml-3 text-white"
+                            d<motion.h1 className="text-2xl md:text-3xl font-bold ml-3 text-white"
                                 initial={{ opacity: 0 }}
                                 whileInView={{ opacity: 1 }}
                                 transition={{ type: 'spring', duration: 1 }}
-                            >Decentralized</motion.h1>
+                            >Networking & Career Growth</motion.h1>
                         </motion.div>
                         <motion.p className="mt-3 text-[#C4C4C4] md:text-lg"
                             initial={{ y: 50, opacity: 0 }}
                             whileInView={{ y: 0, opacity: 1 }}
                             transition={{ type: 'spring', duration: 1 }}
                         >
-                            The Solana network is validated by thousands of nodes that
-                            operate independently of each other, ensuring your data remains
-                            secure and censorship resistant.
+                            Connect with industry professionals, alumni, and like-minded peers to expand your professional network and career opportunities.
                         </motion.p>
                     </div>
                     <div className="w-full h-[50%] p-5 md:mt-20">
@@ -97,17 +92,15 @@ export default function WhyJoinACM() {
                             <motion.h1 className="text-2xl md:text-3xl font-bold ml-3 text-white"
                                 initial={{ opacity: 0 }}
                                 whileInView={{ opacity: 1 }}
-                                transition={{ type: 'spring', duration: 1 }}
-                            >Energy&nbsp;Efficient</motion.h1>
+                                transition={{ type: 'spring', duration: 0.1 }}
+                            >Leadership & Teamwork Experience</motion.h1>
                         </motion.div>
                         <motion.p className="mt-3 text-[#C4C4C4] md:text-lg"
                             initial={{ y: 50, opacity: 0 }}
                             whileInView={{ y: 0, opacity: 1 }}
                             transition={{ type: 'spring', duration: 1 }}
                         >
-                            Solana’s proof of stake network and other innovations minimize
-                            its impact on the environment. Each Solana transaction uses
-                            about the same energy as a few Google searches.
+                            Take on leadership roles, collaborate on projects, and contribute to ACM initiatives to build essential teamwork and management skills.
                         </motion.p>
                     </div>
                 </div>
