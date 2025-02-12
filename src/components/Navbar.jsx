@@ -18,7 +18,7 @@ export default function Navbar() {
 				<div className="w-full h-[65px] px-5 md:px-10 lg:px-[100px] flex justify-between flex-row overflow-hidden">
 					{/* WEBSITE LOGO */}
 					<div className="h-[65px]">
-						<img src="/logo.png" alt="" className="h-full" />
+						<img src="/logo_crop.png" alt="" className="h-full" />
 					</div>
 
 					{/* NAVBAR ITEMS FOR TABLET AND DESKTOP RESOULTIONS */}
