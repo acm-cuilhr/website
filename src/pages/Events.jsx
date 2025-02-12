@@ -1,11 +1,14 @@
-import { section } from 'framer-motion/client'
-import React from 'react'
+import React from 'react';
+import EventsGrid from '../components/EventsGrid';
+import HeaderSection from '../components/EventHeader';
+import FooterSection from '../components/FooterSection';
 
 export default function Events() {
     return (
         <>
-            <section className='h-screen'></section>
-            <section className='h-screen'></section>
+            <HeaderSection />
+            <EventsGrid />
+            <FooterSection />
         </>
-    )
+    );
 }
