@@ -12,7 +12,7 @@ export default function Footer() {
 					</p>
 					<button class='bg-white text-[#222222] font-bold px-10 py-2 my-10 rounded-full flex items-center gap-3'>
 						Get Membership
-						<img src='./assets/icons/right-arrow.svg' alt='' class='mt-1' />
+						<img src='/assets/icons/right-arrow.svg' alt='' class='mt-1' />
 					</button>
 					<p class='mt-4 text-[#FFFFFF80]'>
 						Don't like the forms? Drop us a line via email.
@@ -39,7 +39,7 @@ export default function Footer() {
 					<div class='flex justify-between space-x-4'>
 						<a href='#'>
 							<img
-								src='./assets/icons/Dribbble.svg'
+								src='/assets/icons/Dribbble.svg'
 								alt='Dribbble'
 								width='20'
 								height='20'
@@ -47,7 +47,7 @@ export default function Footer() {
 						</a>
 						<a href='#'>
 							<img
-								src='./assets/icons/Behance.svg'
+								src='/assets/icons/Behance.svg'
 								alt='Behance'
 								width='30'
 								height='30'
@@ -55,7 +55,7 @@ export default function Footer() {
 						</a>
 						<a href='#'>
 							<img
-								src='./assets/icons/Insta.svg'
+								src='/assets/icons/Insta.svg'
 								alt='Instagram'
 								width='20'
 								height='20'
@@ -63,7 +63,7 @@ export default function Footer() {
 						</a>
 						<a href='#'>
 							<img
-								src='./assets/icons/Twitter X.png'
+								src='/assets/icons/Twitter X.png'
 								alt='X'
 								width='20'
 								height='20'

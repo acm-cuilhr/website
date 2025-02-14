@@ -28,7 +28,7 @@ export default function TeamMemberCards(props) {
 
                             {/* FLIP BUTTON */}
                             <button className="absolute bottom-2 right-[-10px] bg-gradient-to-b from-[#E64467] to-[#7E5CC5] flex justify-center items-center w-[50px] h-[50px] z-20 rounded-full cursor-pointer" onClick={() => { setFlip(true) }}>
-                                <img src="./assets/icons/flip.svg" alt="" />
+                                <img src="/assets/icons/flip.svg" alt="" />
                             </button>
                         </div>
 

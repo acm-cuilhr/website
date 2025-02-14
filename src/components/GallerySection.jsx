@@ -8,7 +8,7 @@ const GallerySection = (props) => {
     const { GalleryData } = props
 
     return (
-        <section className="bg-[url('./assets/GallerybgImg.png')] bg-cover bg-center">
+        <section className="bg-[url('/assets/GallerybgImg.png')] bg-cover bg-center">
 
             {/* HEADING */}
             <div className="flex justify-center items-center w-full p-5 py-14 md:p-10 lg:px-[120px] lg:py-[80px]">

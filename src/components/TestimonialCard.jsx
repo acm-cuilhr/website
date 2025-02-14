@@ -17,7 +17,7 @@ export default function TestimonialCard(props) {
                 <img src={profileURL} alt="" className='w-full h-full object-cover' />
             </div>
 
-            <img src="./assets/Comma.svg" alt="" />
+            <img src="/assets/Comma.svg" alt="" />
             <p className='font-semibold text-white text-lg text-center mt-6'>{remarks}</p>
             <div className="absolute mx-auto bottom-6 flex flex-col justify-center items-center">
                 <h1 className='text-xl text-[#C6C6C6] font-bold mt-5'>{name}</h1>
