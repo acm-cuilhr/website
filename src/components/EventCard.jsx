@@ -1,9 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const EventCard = ({ event }) => {
   const eventDate = new Date(event.date);
   const isPastEvent = eventDate < new Date();
+  const navigate = useNavigate();
 
   const formattedDate = eventDate.toLocaleDateString("en-US", {
     month: "short",
@@ -19,6 +21,11 @@ const EventCard = ({ event }) => {
       viewport={{ once: true }}
       transition={{ type: "spring", duration: 1 }}
       whileHover={{ scale: 1.02 }}
+      onClick={() =>
+        navigate(`/events/details`, {
+          state: { event },
+        })
+      }
     >
       <img
         src={event.image}
