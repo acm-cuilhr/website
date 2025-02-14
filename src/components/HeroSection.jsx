@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const HeroSection = () => {
 	return (
-		<section className='h-[80vh] lg:h-screen bg-[url("./assets/Effectherosection.png")] bg-no-repeat bg-cover bg-center px-5 md:px-10 lg:px-0'>
+		<section className='h-[80vh] lg:h-screen bg-[url("/assets/Effectherosection.png")] bg-no-repeat bg-cover bg-center px-5 md:px-10 lg:px-0'>
 			<motion.div
 				className="flex flex-col items-center w-full h-full"
 				initial={{ scale: 0 }}

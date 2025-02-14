@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 
 export default function ContributorsHeroSection() {
     return (
-        <section className='h-[70vh] lg:h-screen bg-[url("./assets/GallerybgImg.png")] bg-no-repeat bg-cover bg-center flex flex-col items-center px-5 md:px-10 lg:px-0'>
+        <section className='h-[70vh] lg:h-screen bg-[url("/assets/GallerybgImg.png")] bg-no-repeat bg-cover bg-center flex flex-col items-center px-5 md:px-10 lg:px-0'>
 
             <motion.div className="mt-[20vh]"
                 initial={{ scale: 0 }}

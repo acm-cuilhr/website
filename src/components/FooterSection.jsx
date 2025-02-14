@@ -15,7 +15,7 @@ export default function FooterSection() {
 
                     <button className='rounded-full w-[180px] h-10 bg-white flex justify-center items-center mt-14 mx-auto lg:mx-0'>
                         <p className='font-semibold mt-[2px]'>Get Membership</p>
-                        <img className='ml-2' src="./assets/icons/right-arrow.svg" alt="" />
+                        <img className='ml-2' src="/assets/icons/right-arrow.svg" alt="" />
                     </button>
 
                     <p className='text-[#888]  mt-14'>Don't like the forms? Drop us a line via email.</p>
@@ -43,16 +43,16 @@ export default function FooterSection() {
                     <h1 className='text-xl text-white font-semibold mt-10 lg:mt-[130px]'>FOLLOW US</h1>
                     <div className="flex flex-row justify-between items-center w-[80%] md:w-[60%] mx-auto lg:mx-0 mt-5">
                         <a href="#" target='_blank'>
-                            <img src="./assets/icons/Dribbble.svg" alt="" />
+                            <img src="/assets/icons/Dribbble.svg" alt="" />
                         </a>
                         <a href="#" target='_blank'>
-                            <img src="./assets/icons/Behance.svg" alt="" />
+                            <img src="/assets/icons/Behance.svg" alt="" />
                         </a>
                         <a href="#" target='_blank'>
-                            <img src="./assets/icons/Insta.svg" alt="" />
+                            <img src="/assets/icons/Insta.svg" alt="" />
                         </a>
                         <a href="#" target='_blank'>
-                            <img src="./assets/icons/Twitter X.png" alt="" />
+                            <img src="/assets/icons/Twitter X.png" alt="" />
                         </a>
                     </div>
 

@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 
 export default function TeamHeroSection() {
     return (
-        <section className='h-screen bg-[url("./assets/GallerybgImg.png")] bg-no-repeat bg-cover bg-center flex flex-col items-center px-5 md:px-10 lg:px-0'>
+        <section className='h-screen bg-[url("/assets/GallerybgImg.png")] bg-no-repeat bg-cover bg-center flex flex-col items-center px-5 md:px-10 lg:px-0'>
 
             <motion.div className="mt-[15vh] md:mt-[25vh]"
                 initial={{ scale: 0 }}

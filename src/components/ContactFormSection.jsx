@@ -72,7 +72,7 @@ export default function ContactFormSection() {
                     <div className="flex flex-col w-full mt-5 lg:mt-0 lg:w-[48%]">
 
                         <FormInput
-                            icon='./assets/icons/user.svg'
+                            icon='/assets/icons/user.svg'
                             placeholder='Full Name'
                             inputType='text'
                             regex={/^[a-zA-Z][a-zA-Z-' ]{2,}$/}
@@ -83,7 +83,7 @@ export default function ContactFormSection() {
                             errorStatement="Please enter a valid name"
                         />
                         <FormInput
-                            icon='./assets/icons/mail.svg'
+                            icon='/assets/icons/mail.svg'
                             placeholder='Email Address'
                             inputType='email'
                             regex={/^[a-zA-Z0-9._%+-]+@gmail\.com$/}
@@ -94,7 +94,7 @@ export default function ContactFormSection() {
                             errorStatement="Please enter a valid email address"
                         />
                         <FormInput
-                            icon='./assets/icons/phone.svg'
+                            icon='/assets/icons/phone.svg'
                             placeholder='Phone Number'
                             inputType='number'
                             regex={/^03\d{9}$/}
@@ -105,7 +105,7 @@ export default function ContactFormSection() {
                             errorStatement="Please enter a phone number"
                         />
                         <TextArea
-                            icon='./assets/icons/chat.svg'
+                            icon='/assets/icons/chat.svg'
                             placeholder='Write something here'
                             inputType='text'
                             regex={/^.{2,}$/}
@@ -134,7 +134,7 @@ export default function ContactFormSection() {
                         whileInView={{ scale: 1 }}
                         transition={{ type: 'spring' }}
                     >
-                        <img className='w-full h-full object-cover' src="./assets/contact-form-img.png" alt="" />
+                        <img className='w-full h-full object-cover' src="/assets/contact-form-img.png" alt="" />
                         <div className="absolute bottom-10 px-10 w-full flex justify-center items-center">
                             <span className='text-center text-2xl font-bold text-white'>“Transforming the technical into thrilling adventures”</span>
                         </div>
