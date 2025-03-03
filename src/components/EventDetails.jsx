@@ -15,7 +15,7 @@ export default function EventDetails() {
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/90" />
         <div className="absolute inset-0 flex items-center justify-center">
           <h1 className="text-4xl md:text-6xl font-bold text-center text-white tracking-wider">
-            Coding Spree
+            {event?.title}
           </h1>
         </div>
       </div>
@@ -43,9 +43,7 @@ export default function EventDetails() {
 
         <div className="mb-12">
           <p className="text-gray-400 text-center max-w-3xl mx-auto">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam.
+            {event?.description}
           </p>
         </div>
 
