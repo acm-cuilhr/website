@@ -23,10 +23,10 @@ export default function Home() {
 	]
 
 	const GalleryData = [
-		{ id: 0, cardType: 'double', cardImg: '/assets/GalleryImg1.png', ImgDescriptionStats: "1000's", ImgDescription: 'house participants', isReversed: false },
-		{ id: 1, cardType: 'single', cardImg: '/assets/GalleryImg2.png' },
-		{ id: 2, cardType: 'double', cardImg: '/assets/GalleryImg3.png', ImgDescriptionStats: "100's", ImgDescription: 'developers building during hackathons', isReversed: true },
-		{ id: 3, cardType: 'single', cardImg: '/assets/GalleryImg4.png' },
+		{ id: 0, cardType: 'double', cardImg: '/assets/events/Fifa.jpeg', ImgDescriptionStats: "1000's", ImgDescription: 'house participants', isReversed: false },
+		{ id: 1, cardType: 'single', cardImg: '/assets/events/Orientation.jpeg' },
+		{ id: 2, cardType: 'double', cardImg: '/assets/events/Chess.jpeg', ImgDescriptionStats: "100's", ImgDescription: 'developers building during hackathons', isReversed: true },
+		{ id: 3, cardType: 'single', cardImg: '/assets/events/ACMCore.jpeg' },
 	];
 
 	return (
