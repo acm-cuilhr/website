@@ -47,43 +47,36 @@ export default function EventDetails() {
           </p>
         </div>
 
-        {/* Competition Details */}
         <div className="mb-16">
           <h2 className="text-2xl font-semibold mb-6 bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
-            Competition Details
+            {event.isCompetition
+              ? "Competition Details"
+              : event.details.heading}
           </h2>
           <div className="space-y-4 text-gray-400">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam.
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam.
-            </p>
+            <p>{event?.details.detail1}</p>
+            <p>{event?.details.detail2}</p>
           </div>
         </div>
 
         {/* Rules */}
         <div>
           <h2 className="text-2xl font-semibold mb-8 bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
-            Rules
+            {event.isCompetition ? "Rules" : event.rules.heading}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[1, 2, 3].map((index) => (
-              <div
-                key={index}
-                className="bg-gray-900/50 border border-gray-800 p-6 rounded-lg relative overflow-hidden group hover:border-blue-500/50 transition-colors"
-              >
-                <div className="absolute left-0 top-0 w-1 h-full bg-gradient-to-b from-blue-500 to-purple-500" />
-                <p className="text-gray-400">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
-              </div>
-            ))}
+            {event?.rules &&
+              Object.entries(event.rules)
+                .filter(([key]) => key !== "heading")
+                .map(([_, text], index) => (
+                  <div
+                    key={index}
+                    className="bg-gray-900/50 border border-gray-800 p-6 rounded-lg relative overflow-hidden group hover:border-blue-500/50 transition-colors"
+                  >
+                    <div className="absolute left-0 top-0 w-1 h-full bg-gradient-to-b from-blue-500 to-purple-500" />
+                    <p className="text-gray-400">{text}</p>
+                  </div>
+                ))}
           </div>
         </div>
       </div>
