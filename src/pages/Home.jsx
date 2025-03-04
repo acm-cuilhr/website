@@ -11,9 +11,9 @@ import FooterSection from '../components/FooterSection';
 export default function Home() {
 
 	const SliderData = [
-		{ id: 0, eventName: 'Students Week', description: 'Student Week is an exciting time at ACM-CUI Lahore, packed with diverse competitions that bring together students from various disciplines. It’s a chance for students to showcase their skills, compete, and have fun while engaging with technology and creativity.', eventImage: '/assets/eventsImg.png' },
-		{ id: 1, eventName: 'Coding Competition', description: 'ACM’s Coding Competitions are designed to challenge and inspire programmers of all levels. Whether you are a beginner or an experienced coder, these contests provide an opportunity to sharpen your problem-solving skills and compete against fellow tech enthusiasts.', eventImage: '/assets/eventsImg.png' },
-		{ id: 2, eventName: 'Hackathons', description: 'Hackathons are the ultimate test of creativity, innovation, and coding skills. ACM-CUI Lahore organizes hackathons where students come together to develop innovative solutions for real-world challenges within a limited time frame.', eventImage: '/assets/eventsImg.png' },
+		{ id: 0, eventName: 'Students Week', description: 'Student Week is an exciting time at ACM-CUI Lahore, packed with diverse competitions that bring together students from various disciplines. It’s a chance for students to showcase their skills, compete, and have fun while engaging with technology and creativity.', eventImage: '/assets/events/ScavengerHunt.jpeg' },
+		{ id: 1, eventName: 'Coding Competition', description: 'ACM’s Coding Competitions are designed to challenge and inspire programmers of all levels. Whether you are a beginner or an experienced coder, these contests provide an opportunity to sharpen your problem-solving skills and compete against fellow tech enthusiasts.', eventImage: '/assets/events/Webathon1.jpeg' },
+		{ id: 2, eventName: 'Hackathons', description: 'Hackathons are the ultimate test of creativity, innovation, and coding skills. ACM-CUI Lahore organizes hackathons where students come together to develop innovative solutions for real-world challenges within a limited time frame.', eventImage: '/assets/events/CodingSpree.jpeg' },
 	]
 
 	const TestimonialData = [
