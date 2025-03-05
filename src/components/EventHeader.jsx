@@ -3,7 +3,8 @@ import { motion } from "framer-motion";
 const EventHeader = () => {
 	return (
 		<motion.section
-			className="h-[50vh] bg-gray-900 flex flex-col items-center justify-center px-5 md:px-10 lg:px-0"
+			className="h-[50vh]  flex flex-col items-center justify-center px-5 md:px-10 lg:px-0"
+			// className='h-[50vh] bg-[url("/assets/GallerybgImg.png")] bg-no-repeat bg-cover bg-center flex flex-col items-center justify-center px-5 md:px-10 lg:px-0'
 			initial={{ opacity: 0 }}
 			animate={{ opacity: 1 }}
 			transition={{ duration: 1 }}>

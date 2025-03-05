@@ -199,7 +199,7 @@ const eventsData = [
 
 export default function EventsGrid() {
 	return (
-		<section className="bg-gray-900 py-16 px-5 md:px-10 lg:px-[120px]">
+		<section className=" py-16 px-5 md:px-10 lg:px-[120px]">
 			<div className="max-w-[1300px] mx-auto">
 				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 auto-rows-[300px] gap-6">
 					{eventsData.map((event) => (
