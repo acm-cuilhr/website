@@ -1,14 +1,13 @@
-import React from "react";
-import EventsGrid from "../components/EventsGrid";
 import HeaderSection from "../components/EventHeader";
+import EventsGrid from "../components/EventsGrid";
 import FooterSection from "../components/FooterSection";
 
 export default function Events() {
-  return (
-    <>
-      <HeaderSection />
-      <EventsGrid />
-      <FooterSection />
-    </>
-  );
+	return (
+		<>
+			<HeaderSection />
+			<EventsGrid />
+			<FooterSection />
+		</>
+	);
 }
