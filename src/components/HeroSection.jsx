@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import React from "react";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
 	return (
@@ -23,9 +24,11 @@ const HeroSection = () => {
 
 				{/* BUTTONS */}
 				<div className="flex flex-row mt-8">
-					<button className="rounded-full w-[120px] md:w-[160px] h-10 md:h-12 bg-gradient-to-r from-[#F087FF] via-[#6E1FCE] to-[#6E1FCE33] text-white hover:shadow-[0_0_15px_2px_#F087FF]">
+					<Link
+						to="https://tally.so/r/wdkNyd"
+						className="rounded-full w-[120px] md:w-[160px] h-10 md:h-12 bg-gradient-to-r from-[#F087FF] via-[#6E1FCE] to-[#6E1FCE33] text-white hover:shadow-[0_0_15px_2px_#F087FF] flex items-center justify-center">
 						JOIN NOW
-					</button>
+					</Link>
 					{/* <button className='border-2 border-white rounded-full w-[120px] md:w-[140px] h-10 md:h-12 bg-gradient-to-r text-white ml-4 hover:shadow-[0_0_15px_2px_#F087FF]'>READ DOCS</button> */}
 				</div>
 			</motion.div>

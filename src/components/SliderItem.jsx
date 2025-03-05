@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function SliderItem(props) {
 	const { id, eventName, description, eventImage } = props.item;
 
@@ -31,9 +33,11 @@ export default function SliderItem(props) {
 					</div>
 
 					{/* <!-- EXPLORE MORE BUTTON --> */}
-					<button className="border-2 border-white text-white px-2 py-1 md:px-3 md:py-2 rounded-full mt-3 lg:mt-0 hover:shadow-[0_0_15px_2px_#F087FF]">
+					<Link
+						to="/events"
+						className="border-2 border-white text-white px-2 py-1 md:px-3 md:py-2 rounded-full mt-3 lg:mt-0 hover:shadow-[0_0_15px_2px_#F087FF]">
 						EXPLORE MORE
-					</button>
+					</Link>
 				</div>
 			</div>
 		</div>

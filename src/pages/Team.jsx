@@ -1,4 +1,3 @@
-import FooterSection from "../components/FooterSection";
 import TeamHeroSection from "../components/TeamHeroSection";
 import TeamMembersSection from "../components/TeamMembersSection";
 
@@ -311,9 +310,6 @@ export default function Team() {
 
 			{/* MEMBERS SECTION */}
 			<TeamMembersSection TeamMembersData={TeamMembersData} />
-
-			{/* FOOTER SECTION */}
-			<FooterSection />
 		</>
 	);
 }

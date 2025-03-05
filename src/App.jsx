@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import EventDetails from "./components/EventDetails";
+import FooterSection from "./components/FooterSection";
 import Navbar from "./components/Navbar";
 import Contributors from "./pages/Contributors";
 import Events from "./pages/Events";
@@ -18,6 +19,7 @@ function App() {
 				<Route path="/team" element={<Team />} />
 				<Route path="/events/details" element={<EventDetails />} />
 			</Routes>
+			<FooterSection />
 		</>
 	);
 }

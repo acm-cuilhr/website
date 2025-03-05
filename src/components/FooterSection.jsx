@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function FooterSection() {
 	return (
 		<footer className="bg-black flex justify-center items-center px-5 py-14 md:px-10 md:py-[80px] lg:px-[120px] lg:py-[120px]">
@@ -13,19 +15,21 @@ export default function FooterSection() {
 						have a chat.
 					</p>
 
-					<button className="rounded-full w-[180px] h-10 bg-white flex justify-center items-center mt-14 mx-auto lg:mx-0">
+					<Link
+						to="https://tally.so/r/wdkNyd"
+						className="rounded-full w-[180px] h-10 bg-white flex justify-center items-center mt-14 mx-auto lg:mx-0">
 						<p className="font-semibold mt-[2px]">Get Membership</p>
 						<img className="ml-2" src="/assets/icons/right-arrow.svg" alt="" />
-					</button>
+					</Link>
 
 					<p className="text-[#888]  mt-14">
-						Don't like the forms? Drop us a line via email.
+						Don&rsquo;t like the forms? Drop us a line via email.
 					</p>
 					<a
 						className="text-white font-semibold  cursor-pointer"
-						href="#"
+						href="mailto:acmchapter@cuilahore.edu.pk"
 						target="_blank">
-						info@acm.com
+						acmchapter@cuilahore.edu.pk
 					</a>
 
 					<p className="mt-8  text-[#888]">
@@ -40,20 +44,20 @@ export default function FooterSection() {
 					<p className="text-[#888]  mt-7">Our Email</p>
 					<a
 						className="text-white font-semibold  cursor-pointer"
-						href="#"
+						href="mailto:acmchapter@cuilahore.edu.pk"
 						target="_blank">
 						acmchapter@cuilahore.edu.pk
 					</a>
 
 					<p className="text-[#888]  mt-7">
-						1.5 KM Defence Rd - off Raiwand Road - Lda Avenue Phase 1 Lda Avenue
-						- Lahore - Punjab 54000 - Pakistan
+						1.5 KM Defence Rd - off Raiwand Road - Lda Avenue Phase 1 - Lahore -
+						Punjab 54000 - Pakistan
 					</p>
 
 					<h1 className="text-xl text-white font-semibold mt-10 lg:mt-[130px]">
 						FOLLOW US
 					</h1>
-					<div className="flex gap-4 items-center w-[80%] md:w-[60%] mx-auto lg:mx-0 mt-5">
+					<div className="flex gap-4 justify-center md:justify-start items-center w-[80%] md:w-[60%] mx-auto lg:mx-0 mt-5">
 						<a href="https://www.instagram.com/acm.cuilhr/" target="_blank">
 							<img
 								src="/assets/icons/instagram.svg"

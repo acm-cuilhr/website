@@ -1,6 +1,5 @@
 import ContributorSection from "../components/ContributorSection";
 import ContributorsHeroSection from "../components/ContributorsHeroSection";
-import FooterSection from "../components/FooterSection";
 
 export default function Contributors() {
 	return (
@@ -10,9 +9,6 @@ export default function Contributors() {
 
 			{/* CONTRIBUTORS SECTION */}
 			<ContributorSection />
-
-			{/* FOOTER SECTION */}
-			<FooterSection />
 		</>
 	);
 }

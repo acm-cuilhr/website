@@ -1,6 +1,5 @@
 import CommunitySection from "../components/CommunitySection";
 import ContactFormSection from "../components/ContactFormSection";
-import FooterSection from "../components/FooterSection";
 import GallerySection from "../components/GallerySection";
 import HeroSection from "../components/HeroSection";
 import SliderSection from "../components/SliderSection";
@@ -101,9 +100,6 @@ export default function Home() {
 
 			{/* CONTACT FORM SECTION */}
 			<ContactFormSection />
-
-			{/* FOOTER SECTION */}
-			<FooterSection />
 		</>
 	);
 }

@@ -5,7 +5,7 @@ export default function TestimonialCard(props) {
 
 	return (
 		<motion.div
-			className="bg-[#161E25] w-full md:w-[380px] lg:[400px] h-[400px] flex flex-col items-center p-6 pt-[100px] rounded-2xl relative mt-[100px]"
+			className="bg-[#161E25] w-full md:w-[380px] h-[400px] flex flex-col items-center p-6 pt-[100px] rounded-2xl relative mt-[100px]"
 			initial={{ scale: 0 }}
 			whileInView={{ scale: 1 }}
 			transition={{ duration: 0.4 }}>

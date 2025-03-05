@@ -25,7 +25,7 @@ const GallerySection = (props) => {
 				<InfiniteMovingCards
 					items={GalleryData}
 					direction="right"
-					speed="fast"
+					speed="normal"
 				/>
 			</div>
 
