@@ -53,7 +53,7 @@ export default function ContributorSection() {
 
 			{/* Designed By */}
 			<div className="mt-10 w-full space-y-5 flex flex-col items-center">
-				<h1 className="text-5xl text-white">Designed By</h1>
+				<h2 className="text-5xl text-white">Designed By</h2>
 				<TeamMemberCards teamMember={designedBy} />
 			</div>
 		</section>
