@@ -1,5 +1,18 @@
 import { useEffect, useState } from "react";
 import ContributorCard from "./ContributorCard";
+import TeamMemberCards from "./TeamMemberCards";
+
+const designedBy = {
+	id: 1,
+	profileURL: "/assets/direcotrate/ammar.png",
+	name: "Ammar Ahmad",
+	currentPosition: "UI Design Contributor",
+	exPositions: "Ex Director, Graphics Team",
+	socialLinks: {
+		linkedin: "https://www.linkedin.com/in/rohitkumar-2001/",
+		instagram: "https://www.instagram.com/rohitkumar_2001/",
+	},
+};
 
 export default function ContributorSection() {
 	// FUNCTIONS
@@ -29,13 +42,19 @@ export default function ContributorSection() {
 	// RETURN
 
 	return (
-		<section className="flex justify-center items-center px-5 py-10 md:px-10 md:py-[80px] lg:px-[120px] lg:py-[120px]">
-			<div className="w-full xl:w-[1300px] flex flex-wrap flex-row gap-6 items-center justify-center">
+		<section className="flex flex-col justify-center items-center px-5 py-10 md:px-10 md:py-[80px] lg:px-[120px] lg:py-[120px]">
+			<div className="w-full flex flex-wrap flex-row gap-6 items-center justify-center">
 				{ContributorsData.map((contributor) => {
 					return (
 						<ContributorCard key={contributor.id} contributor={contributor} />
 					);
 				})}
+			</div>
+
+			{/* Designed By */}
+			<div className="mt-10 w-full space-y-5 flex flex-col items-center">
+				<h1 className="text-5xl text-white">Designed By</h1>
+				<TeamMemberCards teamMember={designedBy} />
 			</div>
 		</section>
 	);
