@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function TeamMemberCards(props) {
 	const [Flip, setFlip] = useState(false);
@@ -15,7 +16,11 @@ export default function TeamMemberCards(props) {
 			initial={{ scale: 0 }}
 			whileInView={{ scale: 1 }}
 			transition={{ type: "spring", duration: 0.8 }}>
-			<div className={`card-inner ${Flip ? "cardRotate" : null}`}>
+			<div
+				className={`card-inner ${Flip ? "cardRotate" : null}
+				`}
+				// className="transform transition-transform duration-500 hover:[transform:rotateY(180deg)]"
+			>
 				{/* CARD FRONT SIDE */}
 				<div className="card-front p-4">
 					<div className="w-full h-full flex flex-col items-center mt-4">
@@ -50,28 +55,22 @@ export default function TeamMemberCards(props) {
 
 						{/* MEMBER SOCIAL LINKS */}
 						<div className="flex flex-row items-center mt-2 mx-auto">
-							<a
-								className={`ml-2 mr-2 ${socialLinks.twitter ? null : "hidden"}`}
-								href={socialLinks.twitter}
-								target="_blank">
-								<i className="fa-brands fa-twitter text-2xl text-[#888]"></i>
-							</a>
-							<a
-								className={`ml-2 mr-2 ${
-									socialLinks.facebook ? null : "hidden"
-								}`}
-								href={socialLinks.facebook}
-								target="_blank">
-								<i className="fa-brands fa-facebook text-2xl text-[#888]"></i>
-							</a>
-							<a
+							<Link
 								className={`ml-2 mr-2 ${
 									socialLinks.linkedin ? null : "hidden"
 								}`}
-								href={socialLinks.linkedin}
+								to={socialLinks.linkedin}
 								target="_blank">
 								<i className="fa-brands fa-linkedin text-2xl text-[#888]"></i>
-							</a>
+							</Link>
+							<Link
+								className={`ml-2 mr-2 ${
+									socialLinks.instagram ? null : "hidden"
+								}`}
+								to={socialLinks.instagram}
+								target="_blank">
+								<i className="fa-brands fa-instagram text-2xl text-[#888]"></i>
+							</Link>
 						</div>
 					</div>
 				</div>
@@ -81,7 +80,7 @@ export default function TeamMemberCards(props) {
 					<div className="w-full h-full flex flex-col items-center justify-center relative">
 						{/* MEMBER POSITION */}
 						<h1 className="bg-clip-text text-transparent bg-gradient-to-b from-[#E64467] to-[#7E5CC5] font-bold text-2xl text-center">
-							{currentPosition}
+							{exPositions ? exPositions : currentPosition}
 						</h1>
 
 						{/* MEMBER NAME */}
@@ -91,24 +90,18 @@ export default function TeamMemberCards(props) {
 					</div>
 					{/* MEMBER SOCIAL LINKS */}
 					<div className="flex flex-row items-center mt-4">
-						<a
-							className={`ml-2 mr-2 ${socialLinks.twitter ? null : "hidden"}`}
-							href={socialLinks.twitter}
-							target="_blank">
-							<i className="fa-brands fa-twitter text-2xl text-[#888]"></i>
-						</a>
-						<a
-							className={`ml-2 mr-2 ${socialLinks.facebook ? null : "hidden"}`}
-							href={socialLinks.facebook}
-							target="_blank">
-							<i className="fa-brands fa-facebook text-2xl text-[#888]"></i>
-						</a>
-						<a
+						<Link
 							className={`ml-2 mr-2 ${socialLinks.linkedin ? null : "hidden"}`}
-							href={socialLinks.linkedin}
+							to={socialLinks.linkedin}
 							target="_blank">
 							<i className="fa-brands fa-linkedin text-2xl text-[#888]"></i>
-						</a>
+						</Link>
+						<Link
+							className={`ml-2 mr-2 ${socialLinks.instagram ? null : "hidden"}`}
+							to={socialLinks.instagram}
+							target="_blank">
+							<i className="fa-brands fa-instagram text-2xl text-[#888]"></i>
+						</Link>
 					</div>
 				</div>
 			</div>
