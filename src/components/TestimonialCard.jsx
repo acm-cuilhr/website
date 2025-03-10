@@ -15,12 +15,14 @@ export default function TestimonialCard(props) {
 			</div>
 
 			<img src="/assets/Comma.svg" alt="" />
-			<p className="font-semibold text-white text-lg text-center mt-6">
+			<p className="font-semibold text-white md:text-lg text-center mt-6">
 				{remarks}
 			</p>
-			<div className="absolute mx-auto bottom-6 flex flex-col justify-center items-center">
-				<h1 className="text-xl text-[#C6C6C6] font-bold mt-5">{name}</h1>
-				<p className="text-lg text-[#C6C6C6]">{profession}</p>
+			<div className="absolute mx-auto bottom-6 flex flex-col justify-center items-center text-center">
+				<h1 className="text-lg md:text-xl text-[#C6C6C6] font-bold mt-5">
+					{name}
+				</h1>
+				<p className="text-base md:text-lg text-[#C6C6C6]">{profession}</p>
 			</div>
 		</motion.div>
 	);
