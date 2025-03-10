@@ -100,7 +100,7 @@ export default function Team() {
 		},
 		{
 			id: 9,
-			profileURL: "/assets/direcotrate/zeeshan.png",
+			profileURL: "/assets/direcotrate/abdullah_rasheed.png",
 			name: "Abdullah Rasheed",
 			currentPosition: "Co-Director, Coding Team",
 			exPositions: "",
@@ -135,7 +135,7 @@ export default function Team() {
 		{
 			id: 12,
 			profileURL: "/assets/direcotrate/amna.png",
-			name: "Amna Tariq",
+			name: "Aamna Tariq",
 			currentPosition: "Director, Social Media Team",
 			exPositions: "",
 			socialLinks: {
@@ -145,7 +145,7 @@ export default function Team() {
 		},
 		{
 			id: 13,
-			profileURL: "/assets/direcotrate/aimen.png",
+			profileURL: "/assets/direcotrate/ali_ramzan.png",
 			name: "Ali Ramzan",
 			currentPosition: "Co-Director, Social Media Team",
 			exPositions: "",
@@ -190,7 +190,7 @@ export default function Team() {
 		},
 		{
 			id: 17,
-			profileURL: "/assets/direcotrate/maha.png",
+			profileURL: "/assets/direcotrate/umer.png",
 			name: "Muhammad Umer",
 			currentPosition: "Co-Director, Graphics Team",
 			exPositions: "",
@@ -201,7 +201,7 @@ export default function Team() {
 		},
 		{
 			id: 18,
-			profileURL: "/assets/direcotrate/maha.png",
+			profileURL: "/assets/direcotrate/placeholder.png",
 			name: "Raheema Aman",
 			currentPosition: "Co-Director, Graphics Team",
 			exPositions: "",
@@ -212,13 +212,12 @@ export default function Team() {
 		},
 		{
 			id: 19,
-			profileURL: "/assets/direcotrate/maha.png",
-			name: "Marwa",
+			profileURL: "/assets/direcotrate/placeholder.png",
+			name: "Marwa Asif",
 			currentPosition: "Co-Director, Graphics Team",
 			exPositions: "",
 			socialLinks: {
-				linkedin: "https://www.linkedin.com/in/raheema-rajput-700927279/",
-				instagram: "https://www.instagram.com/raheema_rajput/",
+				// instagram: "https://www.instagram.com/raheema_rajput/",
 			},
 		},
 		{
@@ -256,7 +255,7 @@ export default function Team() {
 		},
 		{
 			id: 23,
-			profileURL: "/assets/direcotrate/moaz.png",
+			profileURL: "/assets/direcotrate/saad.png",
 			name: "Saad Ahmad",
 			currentPosition: "Co-Director, Photography Team",
 			exPositions: "",
