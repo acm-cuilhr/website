@@ -18,7 +18,7 @@ export default function Home() {
 
 	const TestimonialData = [
 		{ id: 0, profileURL: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cGVvcGxlfGVufDB8fDB8fHww', name: 'Marcus W.', profession: 'Former President', remarks: "Your journey in tech isn’t just about writing code; it’s about solving real-world problems. Stay curious, keep building" },
-		{ id: 1, profileURL: 'https://images.unsplash.com/photo-1479936343636-73cdc5aae0c3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cGVvcGxlfGVufDB8fDB8fHww', name: 'Jessy K.', profession: 'Former Vice President', remarks: "ACM isn’t just an organization; it’s a launchpad. The skills, the network, the experiences—everything shapes you for success" },
+		{ id: 1, profileURL: 'https://images.unsplash.com/photo-1479936343636-73cdc5aae0c3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cGVvcGxlfGVufDB8fDB8fHww', name: 'Awais Akhtar', profession: 'Former Vice President', remarks: "ACM isn’t just an organization; it’s a launchpad. The skills, the network, the experiences—everything shapes you for success" },
 		{ id: 2, profileURL: 'https://media.istockphoto.com/id/2004891062/photo/happy-mid-aged-business-woman-manager-handshaking-greeting-client-in-office.webp?a=1&b=1&s=612x612&w=0&k=20&c=vERE_avkACCKj3dCQBvd0Ywjx_VWqMEYR887kJ5HPT0=', name: 'Marina J.', profession: 'Former General Secretary', remarks: "The best way to predict the future is to create it. Keep exploring, keep experimenting, and make your mark in technology" },
 	]
 
